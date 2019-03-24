@@ -10,7 +10,7 @@
 }
 .photo-content{
   height: 160rpx;
-  width: 665rpx;
+  width: 670rpx;
   display: flex;
 }
 .photo-image{
@@ -23,13 +23,14 @@
 }
 .photo-text{
   height: 100%;
+  width: 460rpx;
   margin-left: 40rpx;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
 .text{
-  width: 500rpx;
+  width: 100%;
   font-size: 16px;
   overflow: hidden;
   text-overflow: ellipsis;

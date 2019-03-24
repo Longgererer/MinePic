@@ -1,7 +1,7 @@
 <view class="photo" >
   <view class="photo-content">
     <view class="photo-image">
-      <image src="{{photosInfo.image}}" mode="widthFix" lazy-load="{{true}}"/>
+      <image src="{{photosInfo.image}}" lazy-load="{{true}}"/>
     </view>
     <view class="photo-text">
       <view class="text">
