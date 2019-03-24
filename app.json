@@ -8,6 +8,7 @@
     "pages/my/my",
     "pages/preview/preview",
     "pages/tablist/tablist",
+    "pages/toweb/toweb",
     "pages/friends/friends"
   ],
   "window": {

@@ -1,4 +1,4 @@
-<view class="head-tab-box" hover-class="hover" hover-start-time="10" hover-stay-time="100" bindtap="{{headTabIndex == 0 ? 'myPicTap' : 'myFriendTap'}}">
+<view class="head-tab-box" bindtap="{{headTabIndex == 0 ? 'myPicTap' : 'myFriendTap'}}">
         <image class="head-tab-image" src="{{headTabImg}}" />
         <text class="head-tab-text">{{headTabText}}</text>
 </view>

@@ -14,7 +14,9 @@ Component({
       })
     },
     myFriendTap(){
-
+      wx.navigateTo({
+        url: "../friends/friends"
+      })
     }
   }
 })

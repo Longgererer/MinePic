@@ -1,0 +1,9 @@
+<view class="tabs">
+  <my-friends wx:for="{{friendTabInfo}}" wx:key="{{index}}" tabInfo="{{item}}" data-index="{{index}}" class="{{tabIndex === index ? 'border' : ''}}" bindtap="changeTab"></my-friends>
+</view>
+<view class="container" wx:if="{{tabIndex===0}}">
+  <friends-item wx:for="{{friendsInfo}}" wx:key="{{index}}" headImg="{{item.headImg}}" nickName="{{item.nickName}}"></friends-item>
+</view>
+<view class="container" wx:if="{{tabIndex===1}}">
+  <friends-item wx:for="{{attentionInfo}}" wx:key="{{index}}" headImg="{{item.headImg}}" nickName="{{item.nickName}}"></friends-item>
+</view>

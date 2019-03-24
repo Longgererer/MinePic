@@ -1,0 +1,8 @@
+<view class="item" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+  <view class="img-view">
+    <image src="{{headImg}}"/>
+  </view>
+  <view class="text">
+    <text>{{nickName}}</text>
+  </view>
+</view>

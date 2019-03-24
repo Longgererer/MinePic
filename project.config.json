@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 10,
+			"current": 11,
 			"list": [
 				{
 					"id": -1,
@@ -104,7 +104,14 @@
 				{
 					"id": -1,
 					"name": "tablist",
-					"pathName": "pages/tablist/tablist"
+					"pathName": "pages/tablist/tablist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "friends",
+					"pathName": "pages/friends/friends",
+					"scene": null
 				}
 			]
 		}

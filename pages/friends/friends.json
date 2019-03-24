@@ -1,5 +1,7 @@
 {
+  "navigationBarTitleText": "我的好友",
   "usingComponents": {
-    
+    "my-friends": "../../component/mypictab/mypictab",
+    "friends-item": "../../component/friendsitem/friendsitem"
   }
 }

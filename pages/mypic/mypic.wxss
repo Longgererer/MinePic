@@ -1,4 +1,7 @@
 /* pages/dynamic/dynamic.wxss */
+page {
+  background: #F3F3F3;
+}
 .container{
   padding: 0;
 }
@@ -92,7 +95,6 @@ my-videos{
   align-items: center;
   justify-content: center;
   height: 650rpx;
-
 }
 .navigate-button{
   background-color: orange;
