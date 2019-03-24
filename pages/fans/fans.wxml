@@ -1,0 +1,16 @@
+<view class="fans-header">
+  <view class="header-img">
+    <image src="{{avatarUrl}}"/>
+  </view>
+  <view class="fans-info">
+    <view class="fans-num">
+      <text wx:for="{{fansNum}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <view class="fans-text">
+      <text wx:for="{{fansText}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+  </view>
+</view>
+<view class="container">
+  <fans-item wx:for="{{fansItemText}}" wx:key="{{index}}" itemsText="{{item}}" info="fans"></fans-item>
+</view>

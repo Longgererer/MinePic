@@ -1,8 +1,8 @@
-<view class="rank-items">
-    <image class="items-img" src="{{itemsImg}}" />
-    <text class="items-text">{{itemsText}}</text>
-    <text wx:if="{{itemsIndex === 3}}" class="items-info-text">别看了没钱</text>
-    <text wx:if="{{itemsIndex === 4}}" class="items-info-text">别看了没粉</text>
+<view class="rank-items" bindtap="{{itemsIndex==4?'showFans':''}}">
+    <image class="items-img" src="{{itemsImg}}" wx:if="{{info === 'my'}}"/>
+    <text class="items-text {{info === 'my' ? '' : 'items-fans'}}">{{itemsText}}</text>
+    <text wx:if="{{itemsIndex === 3 && itemsText === '提现与返佣'}}" class="items-info-text">别看了没钱</text>
+    <text wx:if="{{itemsIndex === 4 && itemsText === '我的粉丝'}}" class="items-info-text">别看了没粉</text>
     <view class="arrow">
     </view>
 </view>

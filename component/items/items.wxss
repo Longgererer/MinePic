@@ -20,11 +20,15 @@
 .items-img{
     width: 50rpx;
     height: 50rpx;
-    margin: 0 20px 0 40px;
+    margin-left: 40px;
 }
 .items-info-text{
     font-size: 15px;
     color: #c4c3c3;
     position: absolute;
     right: 30px;
+}
+.items-fans{
+    margin-left: 20px;
+    font-size: 16px;
 }

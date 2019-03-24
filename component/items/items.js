@@ -5,10 +5,17 @@ Component({
     itemsText: String,
     itemsIndex: Number,
     money: String,
-    fans: String
+    fans: String,
+    avatarUrl: String,
+    info: String
   },
   data: {
   },
   methods: {
+    showFans(){
+      wx.navigateTo({
+        url: "../fans/fans?avatarUrl="+this.properties.avatarUrl
+      })
+    }
   }
 })

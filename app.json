@@ -9,7 +9,8 @@
     "pages/preview/preview",
     "pages/tablist/tablist",
     "pages/toweb/toweb",
-    "pages/friends/friends"
+    "pages/friends/friends",
+    "pages/fans/fans"
   ],
   "window": {
     "navigationBarTitleText": "微商相册",
