@@ -111,7 +111,7 @@ Page({
   },
   toWeb(){
     wx.navigateTo({
-      url: "../toweb/toweb"
+      url: "../friends/friends"
     })
   }
 })
