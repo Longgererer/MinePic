@@ -1,0 +1,19 @@
+<view class="photo" >
+  <view class="photo-content">
+    <view class="photo-image">
+      <image src="{{photosInfo.image}}" mode="widthFix" lazy-load="{{true}}"/>
+    </view>
+    <view class="photo-text">
+      <view class="text">
+        详情描述详情描述详情描述详情描述详情描述详情描述详情描
+      </view>
+      <view class="tag">
+        <text class="tag-text" wx:for="{{photosInfo.tags}}" wx:key="{{index}}">{{item}}</text> 
+      </view>
+      <view class="info">
+        <text class="length">共{{photosInfo.length}}张</text>
+        <text class="time">上传时间：{{photosInfo.time}}</text>
+      </view>
+    </view>
+  </view>
+</view>

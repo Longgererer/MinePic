@@ -1,0 +1,3 @@
+<view class="tab-content" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+  <text>{{tabInfo}}</text>
+</view>

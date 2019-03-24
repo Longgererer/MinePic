@@ -1,0 +1,48 @@
+<view class="whole">
+
+<!-- header: show user's information -->
+  <view class='header'>
+    <my-header userInfo='{{userInfo}}'></my-header>
+      <view class='header-detail'>
+        <image src='/images/tab-left.png'></image>
+        <view class='header-detail-text'>
+          <view class="">
+            <text>上新：{{newPic}}</text>
+            <text>关注度：{{attention}}</text>
+          </view>
+          <view class="">
+            <text>图集：{{pic}}</text>
+            <text>粉丝：{{fans}}</text>
+          </view>
+        </view>
+      </view>
+  </view>
+<!-- container -->
+  <view class="tabs">
+      <my-pictab wx:for="{{tabs}}" wx:key="{{index}}" tabInfo="{{item}}" data-index="{{index}}" bindtap="changeTab" class="{{tabIndex === index ? 'border' : ''}}"></my-pictab>
+  </view>
+  <view class="container" hidden="{{tabIndex !== 0}}">
+    <view class="top">
+      <my-top wx:for="{{topInfo}}" wx:key="{{index}}" content="{{item}}" bindtap="showPreview"></my-top>
+    </view>
+    <view class="photos">
+      <my-photos wx:for="{{photosInfo}}" wx:key="{{index}}" photosInfo="{{item}}" bindtap="showPreview"></my-photos>
+    </view>
+  </view>
+  <view class="container video-box" hidden="{{tabIndex !== 1}}">
+    <view class="video">
+      <my-videos wx:for="{{videoInfo}}" wx:key="{{index}}" videoInfo="{{item}}"></my-videos>
+    </view>
+  </view>
+  <view class="container" hidden="{{tabIndex !== 2}}">
+    <!-- <web-view src="https://www.baidu.com/"/> -->
+    <view class="upload">
+      <button class="navigate-button" hover-class="button-hover" bindtap="toWeb">
+        <text>去上传</text>
+      </button>
+      <view class="text-view">
+        <text>点击按钮跳转至浏览器即可上传动态哦！</text>
+      </view>
+    </view>
+  </view>
+</view>

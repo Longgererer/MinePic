@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/index/index",
+    "pages/dynamic/dynamic",
+    "pages/upload/upload",
+    "pages/mypic/mypic",
+    "pages/my/my",
+    "pages/preview/preview",
+    "pages/tablist/tablist",
+    "pages/toweb/toweb",
+    "pages/friends/friends"
+  ],
+  "window": {
+    "navigationBarTitleText": "微商相册",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/dynamic/dynamic",
+        "text":"相册动态",
+        "iconPath": "/images/dynamic.png",
+        "selectedIconPath": "/images/dynamic-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我",
+        "iconPath": "/images/myPic.png",
+        "selectedIconPath": "/images/my-active.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true
+}
+

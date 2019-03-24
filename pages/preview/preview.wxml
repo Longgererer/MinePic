@@ -1,0 +1,21 @@
+<view class="preview-bg" style="width:{{winWidth}}px;height:{{winHeight}}px">
+  <view class="content">
+    <view class="original-img">
+      <image src="{{previewImgs[current]}}" mode="widthFix"/>
+    </view>
+    <view class="content-text">
+      <text>Lorem ipsum dolor sit amet, aliquam omnis. Esse fugit illum ex quis consequuntur?</text>
+    </view>
+  </view>
+  <view class="thumbnail">
+    <view class='swiper-box'>
+      <swiper  display-multiple-items='{{displayMultipleItems}}' circular="{{circular}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" bindchange="swiperChange">    
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}" current="{{current}}">        
+          <swiper-item>								
+            <image src='{{item}}' class="{{current === index ? 'active' : ''}}"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="top-content" bindtap="toPreview">
+  <image src="{{content.image}}" mode="widthFix"/>
+  <view class="tags">{{content.content}}</view>
+</view>

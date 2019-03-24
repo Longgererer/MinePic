@@ -1,0 +1,52 @@
+.photo{
+  width: 100%;
+  height: 200rpx;
+  background-color: #fff;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-content{
+  height: 160rpx;
+  width: 665rpx;
+  display: flex;
+}
+.photo-image{
+  width: 160rpx;
+  height: 160rpx;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.photo-text{
+  height: 100%;
+  margin-left: 40rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.text{
+  width: 500rpx;
+  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.tag-text{
+  font-size: 14px;
+  padding: 5rpx 10rpx;
+  border-radius: 20px;
+  margin-left: 15rpx;
+  background-color: orange;
+  color: #ffffff;
+}
+.info{
+  font-size: 14px;
+  color: #cccccc;
+}
+.info text{
+  margin-left: 15rpx;
+}

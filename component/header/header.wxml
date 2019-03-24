@@ -1,0 +1,11 @@
+<!--component/header/header.wxml-->
+<!-- header:show userIcon and username -->
+<view class='header'>
+  <view class='header-bg'>
+    <image src='/images/default-bg.jpg'></image>
+    <view class='header-user'>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,14 @@
+.head-tab-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25rpx 50rpx;
+}
+.head-tab-text{
+    font-size: 16px;
+    color: #848176;
+}
+.head-tab-image{
+    width: 70rpx;
+    height: 70rpx;
+}

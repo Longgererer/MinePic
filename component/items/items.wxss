@@ -1,0 +1,30 @@
+.rank-items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0;
+    border-top: 1px solid #cecece;
+}
+.arrow{
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #cecece;
+    border-right: 2px solid #cecece;
+    position: absolute;
+    right: 20rpx;
+    transform: rotate(45deg);
+}
+.items-text{
+    font-size: 16px;
+}
+.items-img{
+    width: 50rpx;
+    height: 50rpx;
+    margin: 0 20px 0 40px;
+}
+.items-info-text{
+    font-size: 15px;
+    color: #c4c3c3;
+    position: absolute;
+    right: 30px;
+}

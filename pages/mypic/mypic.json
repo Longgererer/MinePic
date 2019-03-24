@@ -1,0 +1,10 @@
+{
+    "navigationBarTitleText": "我的相册",
+    "usingComponents": {
+        "my-header": "../../component/header/header",
+        "my-pictab": "../../component/mypictab/mypictab",
+        "my-top": "../../component/mytop/mytop",
+        "my-photos": "../../component/photos/photos",
+        "my-videos": "../../component/videoclip/videoclip"
+    }
+}

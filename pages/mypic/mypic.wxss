@@ -1,0 +1,122 @@
+/* pages/dynamic/dynamic.wxss */
+.container{
+  padding: 0;
+}
+ .header-detail{
+   display: flex;
+   justify-content: flex-start;
+   position:absolute;
+   left:0px;
+   top:0px;
+   width:750rpx;
+   height:120px;
+ }
+ .header-detail image{
+   position: absolute;
+   top: 60rpx;
+   left: 30rpx;
+   opacity: 0.2;
+   z-index: 99;
+   width: 500rpx;
+   height: 146rpx;
+ }
+ .header-detail-text{
+   position: relative;
+   top: 80rpx;
+   left: 40rpx;
+   width: 450rpx;
+   height: 100rpx;
+   color: #ffffff;
+   font-size: 12pt;
+   z-index: 999;
+   margin-left: 10rpx;
+ }
+ .header-detail-text text{
+   margin-right: 60rpx;
+   line-height: 1.5rem;
+ }
+ .tabs{
+   display: flex;
+   width: 100%;
+   height: 100rpx;
+   box-shadow: 0 4px 4px -3px #ccc;
+   background: #ffffff;
+ }
+ my-pictab{
+   flex: 1;
+   box-sizing: border-box;
+   border-left: 1px solid #eeeded;
+ }
+ my-pictab:first{
+    border: none;
+ }
+ .top{
+   width: 95%;
+   height: 250rpx;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   box-sizing: border-box;
+ }
+ my-top{
+   width: 210rpx;
+   height: 210rpx;
+   box-shadow: 0 4px 5px 0px #bebebe;
+ }
+.photos{
+  width: 95%;
+  box-shadow: 0 2px 5px 0px #bebebe;
+  margin-bottom: 20rpx;
+}
+my-photos{
+  width: 100%;
+}
+.video-box{
+  /* background-color: #fff; */
+  margin-top: 15rpx;
+}
+.video{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 95%;
+}
+my-videos{
+  width: 200rpx;
+  height: 250rpx;
+  margin-top: 10rpx;
+}
+.upload{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 650rpx;
+
+}
+.navigate-button{
+  background-color: orange;
+  color: #ffffff;
+  height: 80rpx;
+  width: 200rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+.button-hover{
+  background-color: rgb(197, 128, 0);
+}
+.text-view{
+  color: #cecece;
+}
+.text-view text{
+  font-size: 16px;
+}
+.hover{
+  background-color: #e0dfdf !important;
+}
+.border{
+  border-bottom: 10rpx solid orange;
+}

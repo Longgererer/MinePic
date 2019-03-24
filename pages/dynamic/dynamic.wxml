@@ -1,0 +1,63 @@
+<!--pages/dynamic/dynamic.wxml-->
+<view>
+<!-- header:show userIcon and username -->
+  <my-header userInfo='{{userInfo}}'></my-header>
+
+<!-- container -->
+  <view class='container' >
+    <button wx:if='{{empty}}' bindtap='_toAdd'  >我要上传</button>
+    <view wx:else='{{!empty}}' class='active'>
+      <view wx:for="{{activeInfo}}" wx:key="{{index}}">
+        <active userImg="{{item.userImg}}" nickName="{{item.nickName}}" 
+        createTime="{{item.createTime}}" contentText="{{item.contentText}}" 
+        contentImg="{{item.contentImg}}" bind:share="showShare" bind:download="batchDownload" bind:showPreview="showPreview"></active>
+        <view class="test"></view>
+      </view>
+    </view>
+
+    <view class="commodity-screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="commodity-attr-box" wx:if="{{showModalStatus}}">
+      <text class="share-to">分享至</text>
+      <view class="line"></view>
+      <view class="share-tab">
+        <button class="friends" open-type="share" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+          <image src="../../images/wx.png"/>
+          <text>微信好友</text>
+        </button>
+        <button class="circle-of-friends" bindtap="shareToCircle" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+          <image src="../../images/wxmore.png"/>
+          <text>微信朋友圈</text>
+        </button>
+        <button class="more" bindtap="more" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+          <image src="../../images/more.png"/>
+          <text>更多</text>
+        </button>
+      </view>
+      <view class="line"></view>
+      <view class="cancel" bindtap="hideModal" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+        <text>取消</text>
+      </view>
+    </view>
+    <view class="commodity-screen" wx:if="{{!canvasHidden}}"></view>
+    <view class="canvas-view"  wx:if="{{!canvasHidden}}">
+      <view class="canvas-picture">
+        <view class="title">
+          <text>分享到朋友圈</text>
+          <view class="line"></view>
+          <text class="notice">保存图片到手机，分享到朋友圈</text>
+          <view class="qrcode" hover-class="none" hover-stop-propagation="false">
+            <image bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
+            <canvas hidden="true" style="width: 400rpx;height: 400rpx;background:#f1f1f1;" canvas-id="mycanvas" ></canvas>
+          </view>
+          <view class="save-button">
+            <button bindtap="hideCircle">取消</button>
+            <button bindtap="saveQr">知道了，保存</button>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="more-toast {{showToast? 'visible':''}}" >
+      <text>下载App解锁更多功能...</text>
+    </view>
+  </view>
+</view>

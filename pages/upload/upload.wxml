@@ -1,0 +1,7 @@
+<!-- upload -->
+<view>
+
+  <text>描述文本</text>
+  <textarea placeholder='描述产品信息，不超过100字……'></textarea>
+
+</view>
