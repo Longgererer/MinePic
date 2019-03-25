@@ -48,3 +48,6 @@ fans-item{
 fans-item:last-child{
   border-bottom: 1px solid #cecece; 
 }
+.hover{
+  background-color: #e0dfdf !important;
+}

@@ -1,6 +1,9 @@
 page {
   background: #F3F3F3;
 }
+.container{
+  margin-top: 20rpx;
+}
 .tabs{
   display: flex;
   width: 100%;

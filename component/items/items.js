@@ -16,6 +16,11 @@ Component({
       wx.navigateTo({
         url: "../fans/fans?avatarUrl="+this.properties.avatarUrl
       })
+    },
+    showFriends(){
+      wx.navigateTo({
+        url: "../friends/friends"
+      })
     }
   }
 })

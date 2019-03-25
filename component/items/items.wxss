@@ -16,6 +16,7 @@
 }
 .items-text{
     font-size: 16px;
+    margin-left: 20px;
 }
 .items-img{
     width: 50rpx;
@@ -29,6 +30,8 @@
     right: 30px;
 }
 .items-fans{
-    margin-left: 20px;
     font-size: 16px;
+}
+.hover{
+    background-color: #e0dfdf !important;
 }
