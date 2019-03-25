@@ -10,7 +10,8 @@
     "pages/tablist/tablist",
     "pages/toweb/toweb",
     "pages/friends/friends",
-    "pages/fans/fans"
+    "pages/fans/fans",
+    "pages/qrcode/qrcode"
   ],
   "window": {
     "navigationBarTitleText": "微商相册",
