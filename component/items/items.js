@@ -7,9 +7,12 @@ Component({
     money: String,
     fans: String,
     avatarUrl: String,
-    info: String
+    nickName: String,
+    info: String,
   },
   data: {
+    myCode: 'myCode',
+    weAppCode: 'weAppCode'
   },
   methods: {
     showFans(){
@@ -21,6 +24,17 @@ Component({
       wx.navigateTo({
         url: "../friends/friends"
       })
+    },
+    showQRCode(info){
+      wx.navigateTo({
+        url: `../qrcode/qrcode?avatarUrl=${this.properties.avatarUrl}&nickName=${this.properties.nickName}&info=${info}`
+      })
+    },
+    showAppQRCode(){
+      this.showQRCode('appCode')
+    },
+    showMyQRCode(){
+      this.showQRCode('myCode')
     }
   }
 })

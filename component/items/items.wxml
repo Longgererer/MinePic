@@ -1,4 +1,4 @@
-<view class="rank-items" bindtap="{{itemsIndex==4?'showFans':itemsIndex==0&&itemsText=='查看粉丝'?'showFriends':''}}" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+<view class="rank-items" bindtap="{{itemsIndex==4?'showFans':itemsText=='查看粉丝'?'showFriends':itemsText=='我的小程序码'?'showAppQRCode':itemsText=='我的二维码'?'showMyQRCode':''}}" hover-class="hover" hover-start-time="10" hover-stay-time="100">
     <image class="items-img" src="{{itemsImg}}" wx:if="{{info === 'my'}}"/>
     <text class="items-text {{info === 'my' ? '' : 'items-fans'}}">{{itemsText}}</text>
     <text wx:if="{{itemsIndex === 3 && itemsText === '提现与返佣'}}" class="items-info-text">别看了没钱</text>

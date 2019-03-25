@@ -8,7 +8,7 @@
     </view>
     <view class="items">
       <view wx:for="{{itemsInfo}}" class="items-box" wx:key="{{index}}">
-        <my-items itemsImg="{{item.itemsImg}}" itemsText="{{item.itemsText}}" money="{{money}}" fans="{{fans}}" itemsIndex="{{index}}" info="my" avatarUrl="{{userInfo.avatarUrl}}"></my-items>
+        <my-items itemsImg="{{item.itemsImg}}" itemsText="{{item.itemsText}}" money="{{money}}" fans="{{fans}}" itemsIndex="{{index}}" info="my" nickName="{{userInfo.nickName}}" avatarUrl="{{userInfo.avatarUrl}}"></my-items>
       </view>
     </view>
   </view>

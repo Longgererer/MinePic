@@ -1,3 +1,67 @@
 page{
   background-color: #F3F3F3;
 }
+.header{
+  width: 100%;
+  height: 180rpx;
+  display: flex;
+  align-items: center
+}
+.header>view{
+  margin-left: 30rpx;
+}
+.header-img{
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid #fff;
+  border-radius: 100rpx;
+  box-shadow: 0px 5px 5px 0px #adadad;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.header-img image{
+  width: 100%;
+  height: 100%;
+}
+.header-name{
+  color: #818181;
+  font-size: 16px;
+}
+.content{
+  width: 460rpx;
+  display: flex;
+  flex-direction: column;
+  margin: -50rpx 100rpx 50rpx 170rpx;
+}
+.content-text{
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+}
+.content-text text{
+  margin-bottom: 10rpx;
+}
+.content-img{
+  margin-top: 30rpx;
+  background-color: #fff;
+}
+.content-img image{
+  width: 100%;
+}
+.button-view{
+  width: 100%;
+  height: 120rpx;
+  display: flex;
+  align-items: center;
+}
+.navigate-button{
+  width: 80%;
+  background-color: transparent;
+  color: orange;
+  border: 1px solid orange;
+  font-size: 16px;
+}
+.button-hover{
+  color: #fff;
+  background-color: orange;
+}

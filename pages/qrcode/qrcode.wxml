@@ -1,3 +1,21 @@
 <view class="whole">
-  
+  <view class="header">
+    <view class="header-img">
+      <image src="{{avatarUrl}}"/>
+    </view>
+    <view class="header-name">
+      <text>{{nickName}}</text>
+    </view>
+  </view>
+  <view class="content">
+    <view class="content-text">
+      <text wx:for="{{contentText}}" wx:key="{{index}}">{{item}}</text>
+    </view>
+    <view class="content-img">
+      <image />
+    </view>
+  </view>
+  <view class="button-view">
+    <button class="navigate-button" hover-class="button-hover">我要分享</button>
+  </view>
 </view>
