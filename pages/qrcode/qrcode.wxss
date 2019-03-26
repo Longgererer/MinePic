@@ -31,7 +31,7 @@ page{
   width: 460rpx;
   display: flex;
   flex-direction: column;
-  margin: -50rpx 100rpx 50rpx 170rpx;
+  margin: -50rpx 100rpx 50rpx 180rpx;
 }
 .content-text{
   display: flex;

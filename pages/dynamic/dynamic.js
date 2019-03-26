@@ -13,98 +13,98 @@ Page({
     activeInfo: [
       {
         userImg: "../../images/qq.png",
-        nickName: "lliiooiill",
-        createTime: "发布时间",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        nickName: "微商张三",
+        createTime: "刚刚",
+        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
         contentImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ],
         originalImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ]
       },
       {
         userImg: "../../images/qq.png",
-        nickName: "lliiooiill",
-        createTime: "发布时间",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        nickName: "微商张三",
+        createTime: "半小时前",
+        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
         contentImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ],
         originalImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ]
       },
       {
         userImg: "../../images/qq.png",
-        nickName: "lliiooiill",
-        createTime: "发布时间",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        nickName: "微商李四",
+        createTime: "两小时前",
+        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
         contentImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ],
         originalImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ]
       },
       {
         userImg: "../../images/qq.png",
-        nickName: "lliiooiill",
-        createTime: "发布时间",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        nickName: "微商张三",
+        createTime: "昨天",
+        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
         contentImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ],
         originalImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ]
       },
       {
         userImg: "../../images/qq.png",
-        nickName: "lliiooiill",
-        createTime: "发布时间",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        nickName: "微商李四",
+        createTime: "三天前",
+        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
         contentImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ],
         originalImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ]
       },
       {
         userImg: "../../images/qq.png",
-        nickName: "lliiooiill",
-        createTime: "发布时间",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        nickName: "微商李四",
+        createTime: "一年前",
+        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
         contentImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ],
         originalImg: [
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png",
-          "../../images/qq.png","../../images/qq.png","../../images/qq.png"
+          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
         ]
       }
     ]
@@ -342,9 +342,10 @@ Page({
       }
     });
   },
-  showPreview: function(){
+  showPreview: function(e){
+    let info = JSON.stringify(e.detail)
     wx.navigateTo({
-      url: "../preview/preview"
+      url: `../preview/preview?previewInfo=${info}`
     })
   }
 })

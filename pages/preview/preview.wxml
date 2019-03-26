@@ -4,7 +4,7 @@
       <image src="{{previewImgs[current]}}" mode="widthFix"/>
     </view>
     <view class="content-text">
-      <text>Lorem ipsum dolor sit amet, aliquam omnis. Esse fugit illum ex quis consequuntur?</text>
+      <text>{{contentText}}</text>
     </view>
   </view>
   <view class="thumbnail">

@@ -3,17 +3,7 @@ Page({
     data:{
         winWidth: "",
         winHeight: "",
-        imgUrls: [
-            '../../images/pic1.jpg',
-            '../../images/pic2.jpg',
-            '../../images/pic3.jpg',
-            '../../images/pic4.jpg',
-            '../../images/pic5.jpg',
-            '../../images/pic1.jpg',
-            '../../images/pic2.jpg',
-            '../../images/pic3.jpg',
-            '../../images/pic4.jpg'
-        ],
+        imgUrls: [],
         previewImgs: [
             '../../images/pic1.jpg',
             '../../images/pic2.jpg',
@@ -25,13 +15,14 @@ Page({
             '../../images/pic3.jpg',
             '../../images/pic4.jpg'
         ],
+        contentText: '',
         current: 1,
         circular: true,
         previousMargin:'100rpx',
         nextMargin:'100rpx',
         displayMultipleItems: 3,
     },
-    onLoad: function(){
+    onLoad: function(options){
         wx.getSystemInfo({
             success: (res) => {
                 this.setData({
@@ -41,6 +32,11 @@ Page({
             }
         });
         app.showLoad()
+        let info = JSON.parse(options.previewInfo)
+        this.setData({
+            imgUrls: info.contentImg,
+            contentText: info.contentText
+        })
     },
     swiperChange: function (e) {
         let current = e.detail.current + 1

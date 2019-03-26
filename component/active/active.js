@@ -8,16 +8,26 @@ Component({
     contentImg: Array
   },
   data: {
+    whole: false
   },
   methods: {
+    showText(){
+      this.setData({
+        whole: !this.data.whole
+      })
+    },
     share(){
       this.triggerEvent('share')
     },
     downloadImg(){
       this.triggerEvent('download')
     },
-    toPreview(){
-      this.triggerEvent('showPreview')
+    toPreview(e){
+      let info = {
+        contentText: this.properties.contentText,
+        contentImg: this.properties.contentImg
+      }
+      this.triggerEvent('showPreview', info)
     }
   }
 })

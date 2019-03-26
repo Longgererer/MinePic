@@ -6,12 +6,12 @@
             <text class="release-time">{{createTime}}</text>
         </view>
     </view>
-    <view class="active-text">
-        <text selectable="{{true}}">{{contentText}}</text>
+    <view class="active-text" bindtap="showText">
+        <text selectable="{{true}}" class="{{whole?'':'show-text'}}">{{contentText}}</text>
     </view>
     <view class="active-image" bindtap="toPreview"> 
       <image class="picture" wx:for="{{contentImg}}" wx:key="{{index}}" src="{{item}}"/>
-    </view> 
+    </view>
     <view class="handle">
         <view class="download" bindtap="downloadImg">
         <image src="../../images/dowload.png"/>
