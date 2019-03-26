@@ -3,8 +3,8 @@
     <view class="original-img">
       <image src="{{previewImgs[current]}}" mode="widthFix"/>
     </view>
-    <view class="content-text">
-      <text>{{contentText}}</text>
+    <view class="content-text" bindtap="showText">
+      <text class="{{whole?'':'show-text'}}">{{contentText}}</text>
     </view>
   </view>
   <view class="thumbnail">

@@ -21,6 +21,7 @@ Page({
         previousMargin:'100rpx',
         nextMargin:'100rpx',
         displayMultipleItems: 3,
+        whole: false
     },
     onLoad: function(options){
         wx.getSystemInfo({
@@ -50,5 +51,10 @@ Page({
                 current: 0
             })
         }
-    }
+    },
+    showText: function(){
+        this.setData({
+            whole: !this.data.whole
+        })
+    },
 })

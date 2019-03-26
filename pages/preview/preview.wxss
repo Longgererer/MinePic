@@ -12,17 +12,28 @@ page{
     position: relative;
 }
 .content-text{
-    height: 200rpx;
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
     font-size: 16px;
-    padding: 0 20rpx;
+    padding: 20rpx 20rpx;
     position: absolute;
     bottom: 0;
     z-index: 100;
+}
+.content-text text{
+    height: 100%;
+    display: -webkit-box;
+    line-height: 40rpx;
+}
+.show-text{
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow:ellipsis;
 }
 .original-img{
     width: 100%;
