@@ -35,7 +35,6 @@
     </view>
   </view>
   <view class="container" hidden="{{tabIndex !== 2}}">
-    <!-- <web-view src="https://www.baidu.com/"/> -->
     <view class="upload">
       <button class="navigate-button" hover-class="button-hover" bindtap="toWeb">
         <text>去上传</text>

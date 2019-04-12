@@ -33,6 +33,7 @@ Page({
             }
         });
         app.showLoad()
+        console.log(options.previewInfo)
         let info = JSON.parse(options.previewInfo)
         this.setData({
             imgUrls: info.contentImg,

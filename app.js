@@ -1,20 +1,46 @@
 //app.js
 App({
   globalData: {
-    userInfo:null
+    userInfo: null,
+    appid: 'wx30cbd5bf82ee6334',
+    appSecret: '1a3ef733c21a5c63c2755a03b9c0da31',
+    openid: ''
   },
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-        // return openId, sessionKey, unionId
-      }
-    })
+    //获取缓存数据openid，如果没有，请求获取openid
+      let openid = wx.getStorageSync('openid')
+      if (!openid) {
+        console.log('没缓存，开始登陆')
+        wx.login({
+          success: res => {
+            let code = res.code
+            if(code) {
+              wx.request({
+                url: 'http://110.64.211.2/weice/public/index/login',
+                data: {
+                  code: code,
+                  appid: this.globalData.appid,
+                  appSecret: this.globalData.appSecret
+                },
+                method: 'GET',
+                header: {
+                  'content-type': 'application/json'
+                },
+                success: res => {
+                  if(res.statusCode == 200) {
+                    this.globalData.openid = res.data.openid
+                    wx.setStorageSync('openid', res.data.openid)
+                  } else {
+                    console.log(res.errMsg)
+                  }
+                }
+              })
+            } else {
+              console.log('获取用户登录失败：' + res.errMsg);
+            }
+          }
+        })
+      } 
     // 获取用户信息  
     wx.getSetting({
       success: res => {

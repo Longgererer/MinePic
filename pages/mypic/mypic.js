@@ -22,10 +22,21 @@ Page({
       tStart: false
     },
     activeTab: 0,
+    info: [
+      {
+        images: [],
+        previewImgs: [],
+        content: "",
+        length: 0,
+        top: false,
+        time: "",
+        tags: []
+      }
+    ],
     topInfo: [
-      {image: "../../images/pic1.jpg", content: "视频描述视频描述视频描述视频描述视频描述视频描述"},
-      {image: "../../images/pic2.jpg", content: "视频描述视频描述视频描述视频描述视频描述视频描述"},
-      {image: "../../images/pic3.jpg", content: "视频描述视频描述视频描述视频描述视频描述视频描述"}
+      {image: "../../images/pic1.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"},
+      {image: "../../images/pic2.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"},
+      {image: "../../images/pic3.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"}
     ],
     photosInfo: [
       {image: "../../images/pic1.jpg", tags: ["标签1", "标签2", "标签3"], content: "", length: 9, time: "2019/04/03"},
