@@ -11,27 +11,6 @@ page{
     flex: 8;
     position: relative;
 }
-.top-box{
-    position: absolute;
-    z-index: 10;
-    width: 100%;
-    height: 80rpx;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.top-button{
-    width: 200rpx;
-    height: 60rpx;
-    border: 1px solid #fff;
-    background-color: transparent;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30rpx;
-}
 .content-text{
     background-color: rgba(0, 0, 0, 0.6);
     display: flex;
@@ -54,7 +33,7 @@ page{
     -webkit-box-orient: vertical;
     -webkit-line-clamp:2;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
 }
 .original-img{
     width: 100%;

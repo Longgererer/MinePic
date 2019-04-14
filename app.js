@@ -4,7 +4,8 @@ App({
     userInfo: null,
     appid: 'wx30cbd5bf82ee6334',
     appSecret: '1a3ef733c21a5c63c2755a03b9c0da31',
-    openid: ''
+    openid: '',
+    urlPath: ''
   },
   onLaunch: function () {
     //获取缓存数据openid，如果没有，请求获取openid

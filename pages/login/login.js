@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
   data: {
     //判断小程序的API，回调，参数，组件等是否在当前版本可用。
@@ -29,13 +30,12 @@ Page({
       var that = this;
       //插入登录的用户的相关信息到数据库
       wx.request({
-        url: getApp().globalData.urlPath,
+        url: app.globalData.urlPath,
+        method: 'POST',
         data: {
-          openid: getApp().globalData.openid,
+          openid: app.globalData.openid,
           nickName: e.detail.userInfo.nickName,
-          avatarUrl: e.detail.userInfo.avatarUrl,
-          province: e.detail.userInfo.province,
-          city: e.detail.userInfo.city
+          avatarUrl: e.detail.userInfo.avatarUrl
         },
         header: {
           'content-type': 'application/json'

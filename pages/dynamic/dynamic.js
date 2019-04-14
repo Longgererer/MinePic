@@ -1,5 +1,4 @@
 const app = getApp()
-const QR = require("../../utils/qrcode.js")
  
 Page({
   data: {
@@ -274,13 +273,31 @@ Page({
         }
       })
     }
-    var url = "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token="+accessToken;
-    if (options) {
-      url = options.url;
-      console.log(1);
-    }
-    var size = this.setCanvasSize(); //动态设置画布大小 
-    this.createQrCode(url, "mycanvas", size.w, size.h);   
+    wx.request({
+      url: 'http://110.64.211.2/weice/public/index/albumlst/index',
+      data: {
+        openid: this.globalData.openid
+      },
+      method: 'POST',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: res => {
+        if(res.statusCode == 200) {
+          console.log(res.data)
+        } else {
+          console.log(res.errMsg)
+        }
+      }
+    })
+
+    // var url = "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token="+accessToken;
+    // if (options) {
+    //   url = options.url;
+    //   console.log(1);
+    // }
+    // var size = this.setCanvasSize(); //动态设置画布大小 
+    // this.createQrCode(url, "mycanvas", size.w, size.h);   
   },
   onShow: function(){
     app.showLoad()
@@ -293,55 +310,55 @@ Page({
       hasUserInfo: true
     })
   },
-  setCanvasSize: function() {
-    var size = {};
-    try {
-      var res = wx.getSystemInfoSync();
-      var scale = 750 / 400; //不同屏幕下canvas的适配比例；设计稿是750宽 686是因为样式wxss文件中设置的大小
-      var width = res.windowWidth / scale;
-      var height = width; //canvas画布为正方形
-      size.w = width;
-      size.h = height;
-    } catch (e) {
-      // Do something when catch error
-      console.log("获取设备信息失败" + e);
-    }
-    return size;
-  },
+  // setCanvasSize: function() {
+  //   var size = {};
+  //   try {
+  //     var res = wx.getSystemInfoSync();
+  //     var scale = 750 / 400; //不同屏幕下canvas的适配比例；设计稿是750宽 686是因为样式wxss文件中设置的大小
+  //     var width = res.windowWidth / scale;
+  //     var height = width; //canvas画布为正方形
+  //     size.w = width;
+  //     size.h = height;
+  //   } catch (e) {
+  //     // Do something when catch error
+  //     console.log("获取设备信息失败" + e);
+  //   }
+  //   return size;
+  // },
   // 获取校验码
   
   /**
    * 绘制二维码图片
    */
-  createQrCode: function(url, canvasId, cavW, cavH) {
-    console.log('开始');
-    //调用插件中的draw方法，绘制二维码图片
-    QR.api.draw(url, canvasId, cavW, cavH);
-    setTimeout(() => {
-      this.canvasToTempImage();
-    }, 1000);
-  },
+  // createQrCode: function(url, canvasId, cavW, cavH) {
+  //   console.log('开始');
+  //   //调用插件中的draw方法，绘制二维码图片
+  //   QR.api.draw(url, canvasId, cavW, cavH);
+  //   setTimeout(() => {
+  //     this.canvasToTempImage();
+  //   }, 1000);
+  // },
   /**
    * 获取临时缓存照片路径，存入data中
    */
-  canvasToTempImage: function() {
-    var that = this;
-    //把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。
-    wx.canvasToTempFilePath({
-      canvasId: 'mycanvas',
-      success: function(res) {
-        var tempFilePath = res.tempFilePath;
-        console.log(tempFilePath);
-        that.setData({
-          imagePath: tempFilePath,
-          // canvasHidden:true
-        });
-      },
-      fail: function(res) {
-        console.log(res);
-      }
-    });
-  },
+  // canvasToTempImage: function() {
+  //   var that = this;
+  //   //把当前画布指定区域的内容导出生成指定大小的图片，并返回文件路径。
+  //   wx.canvasToTempFilePath({
+  //     canvasId: 'mycanvas',
+  //     success: function(res) {
+  //       var tempFilePath = res.tempFilePath;
+  //       console.log(tempFilePath);
+  //       that.setData({
+  //         imagePath: tempFilePath,
+  //         // canvasHidden:true
+  //       });
+  //     },
+  //     fail: function(res) {
+  //       console.log(res);
+  //     }
+  //   });
+  // },
   showPreview: function(e){
     let info = JSON.stringify(e.detail)
     wx.navigateTo({

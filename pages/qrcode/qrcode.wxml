@@ -12,10 +12,10 @@
       <text wx:for="{{contentText}}" wx:key="{{index}}">{{item}}</text>
     </view>
     <view class="content-img">
-      <image />
+      <image src="{{QRCodeImg}}" bindtap="previewImage"/>
     </view>
   </view>
   <view class="button-view">
-    <button class="navigate-button" hover-class="button-hover">我要分享</button>
+    <button class="navigate-button" hover-class="button-hover" bindtap="shareQRCode">我要分享</button>
   </view>
 </view>

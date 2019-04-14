@@ -23,10 +23,10 @@
   </view>
   <view class="container" hidden="{{tabIndex !== 0}}">
     <view class="top">
-      <my-top wx:for="{{topInfo}}" wx:key="{{index}}" content="{{item}}" bindtap="showPreview"></my-top>
+      <my-top wx:for="{{topInfo}}" wx:key="{{index}}" content="{{item}}" data-info="{{item}}" bindtap="showMyDicPreview"></my-top>
     </view>
     <view class="photos">
-      <my-photos wx:for="{{photosInfo}}" wx:key="{{index}}" photosInfo="{{item}}" bindtap="showPreview"></my-photos>
+      <my-photos wx:for="{{photosInfo}}" wx:key="{{index}}" data-info="{{item}}" photosInfo="{{item}}" bindtap="showMyDicPreview"></my-photos>
     </view>
   </view>
   <view class="container video-box" hidden="{{tabIndex !== 1}}">

@@ -5,7 +5,7 @@
     </view>
     <view class="photo-text">
       <view class="text">
-        详情描述详情描述详情描述详情描述详情描述详情描述详情描
+        {{photosInfo.content}}
       </view>
       <view class="tag">
         <text class="tag-text" wx:for="{{photosInfo.tags}}" wx:key="{{index}}">{{item}}</text> 

@@ -39,14 +39,14 @@ Page({
       {image: "../../images/pic3.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"}
     ],
     photosInfo: [
-      {image: "../../images/pic1.jpg", tags: ["标签1", "标签2", "标签3"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic2.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic3.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic4.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic5.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic1.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic2.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic3.jpg", tags: ["标签1"], content: "", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic1.jpg", tags: ["标签1", "标签2", "标签3"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic2.jpg", tags: ["标签1", "标签2"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic3.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic4.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic5.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic1.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic2.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
+      {image: "../../images/pic3.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
     ],
     videoInfo: [
       {
@@ -109,15 +109,16 @@ Page({
     app.showLoad()
   },
   changeTab: function(e){
-    let index = e.target.dataset.index;
+    let index = e.target.dataset.index
     this.setData({
       tabIndex: index
     })
     app.showLoad()
   },
-  showPreview(){
+  showMyDicPreview(e){
+    let info = JSON.stringify(e.currentTarget.dataset.info)
     wx.navigateTo({
-      url: "../preview/preview"
+      url: `../mydicpreview/mydicpreview?previewInfo=${info}`
     })
   },
   toWeb(){

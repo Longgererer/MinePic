@@ -1,13 +1,10 @@
 <view class="preview-bg" style="width:{{winWidth}}px;height:{{winHeight}}px">
   <view class="content">
-    <view class="top-box">
-      <button class="top-button">置顶</button>
-    </view>
     <view class="original-img">
       <image src="{{previewImgs[current]}}" mode="widthFix"/>
     </view>
     <view class="content-text" bindtap="showText">
-      <text class="{{whole?'':'show-text'}}">{{contentText}}文字未加载文字未加载文字未加载文字未加载文字未加载文字未加载文字未加载文字未加载</text>
+      <text class="{{whole?'':'show-text'}}">{{contentText}}</text>
     </view>
   </view>
   <view class="thumbnail">
