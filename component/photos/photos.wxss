@@ -32,6 +32,7 @@
 .text{
   width: 100%;
   font-size: 16px;
+  padding-left: 15rpx;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -45,8 +46,12 @@
   color: #ffffff;
 }
 .info{
+  width: 100%;
   font-size: 14px;
   color: #cccccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .info text{
   margin-left: 15rpx;

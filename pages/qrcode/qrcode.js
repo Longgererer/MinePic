@@ -20,7 +20,7 @@ Page({
           '不仅第一时间查看最新动态😚',
           '还能轻松一键转发朋友圈😀'
         ],
-        QRCodeImg: '../../images/myQRCode.png'
+        QRCodeImg: '../../images/myQRCode.jpg'
       })
     }else{
       this.setData({
@@ -29,7 +29,7 @@ Page({
           '⭐每日上新，第一时间就来看新品',
           '⭐精准搜款，分类齐全找款超简单'
         ],
-        QRCodeImg: '../../images/myQRCode.png'
+        QRCodeImg: '../../images/xcxQRCode.jpg'
       })
     }
   },
@@ -38,17 +38,13 @@ Page({
     wx.setClipboardData({
       data,
       success (res) {
-        wx.getClipboardData({
-          success(res) {
-            console.log(res.data) // data
-          }
+        wx.hideToast()
+        wx.showToast({
+          title: '文字已复制，保存二维码分享到朋友圈哦',
+          icon: 'none',
+          duration: 3000
         })
       } 
-    })
-    wx.showToast({
-      title: '文字已复制，保存二维码分享到朋友圈哦',
-      icon: 'none',
-      duration: 3000
     })
   },
   previewImage: function (e) {

@@ -5,18 +5,16 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad: function () {
-    var that = this;
     // 查看是否授权
     wx.getSetting({
-      success: function (res) {
+      success: res => {
         if (res.authSetting['scope.userInfo']) {
           wx.getUserInfo({
-            success: function (res) {
-              //从数据库获取用户信息
-              that.queryUsreInfo();
+            success: res => {
+              console.log(res.rawData)
               //用户已经授权过
               wx.switchTab({
-                url: '../../pages/my/my'
+                url: '../my/my'
               })
             }
           });
@@ -27,30 +25,32 @@ Page({
   bindGetUserInfo: function (e) {
     if (e.detail.userInfo) {
       //用户按了允许授权按钮s
-      var that = this;
       //插入登录的用户的相关信息到数据库
+      app.globalData.userInfo = e.detail.userInfo
+      const openid = app.globalData.openid
       wx.request({
-        url: app.globalData.urlPath,
-        method: 'POST',
+        url: 'http://39.97.184.156/weice/public/index/headimgurl/index',
+        method: 'GET',
         data: {
-          openid: app.globalData.openid,
-          nickName: e.detail.userInfo.nickName,
-          avatarUrl: e.detail.userInfo.avatarUrl
+          openid,
+          nickname: e.detail.userInfo.nickName,
+          headimgurl: e.detail.userInfo.avatarUrl
         },
         header: {
           'content-type': 'application/json'
         },
-        success: function (res) {
-          //从数据库获取用户信息
-          that.queryUsreInfo();
+        success: res => {
+          console.log(res)
           console.log("插入小程序登录用户信息成功！"+"\n openid="+openid);
         }
       });
+      wx.setStorage({
+        key: "userInfo",
+        data: e.detail.userInfo
+      })
       //授权成功后，跳转进入小程序首页
       wx.switchTab({
-        
-        url: '../../pages/index/index'
-        
+        url: '../my/my'
       })
     } else {
       //用户按了拒绝按钮
@@ -68,20 +68,20 @@ Page({
     }
   },
   //获取用户信息接口
-  queryUsreInfo: function () {
-    wx.request({
-      url: getApp().globalData.urlPath ,
-      data: {
-        openid: getApp().globalData.openid
-      },
-      header: {
-        'content-type': 'application/json'
-      },
-      success: function (res) {
-        console.log(res.data);
-        getApp().globalData.userInfo = res.data;
-      }
-    });
-  },
+  // queryUserInfo: function () {
+  //   wx.request({
+  //     url: getApp().globalData.urlPath ,
+  //     data: {
+  //       openid: getApp().globalData.openid
+  //     },
+  //     header: {
+  //       'content-type': 'application/json'
+  //     },
+  //     success: function (res) {
+  //       console.log(res.data);
+  //       getApp().globalData.userInfo = res.data;
+  //     }
+  //   });
+  // },
 
 })

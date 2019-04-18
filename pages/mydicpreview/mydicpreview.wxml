@@ -1,7 +1,10 @@
 <view class="preview-bg" style="width:{{winWidth}}px;height:{{winHeight}}px">
   <view class="content">
+    <view class="top-box">
+      <button class="top-button {{status == 1 ? 'bt-color' : ''}}" bindtap="changeTop">{{status == 1 ? "已置顶" : "置顶"}}</button>
+    </view>
     <view class="original-img">
-      <image src="{{previewImgs[current]}}" mode="widthFix"/>
+      <image src="{{previewImgs[current]}}" mode="aspectFit"></image>
     </view>
     <view class="content-text" bindtap="showText">
       <text class="{{whole?'':'show-text'}}">{{contentText}}</text>
@@ -9,13 +12,18 @@
   </view>
   <view class="thumbnail">
     <view class='swiper-box'>
-      <swiper  display-multiple-items='{{displayMultipleItems}}' circular="{{circular}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" bindchange="swiperChange">    
+      <swiper wx:if="{{!isHide}}" display-multiple-items='{{displayMultipleItems}}' circular="{{circular}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" bindchange="swiperChange">    
         <block wx:for="{{imgUrls}}" wx:key="{{index}}" current="{{current}}">        
           <swiper-item>								
             <image src='{{item}}' class="{{current === index ? 'active' : ''}}"></image>
           </swiper-item>
         </block>
       </swiper>
+      <view class="view-box" wx:if="{{isHide}}">
+        <view class="view-box-content" wx:for="{{imgUrls}}" wx:key="{{index}}" data-index="{{index}}" bindtap="changeVBImg">
+          <image class="{{index == current ? 'border' : 'opacity'}}" src="{{item}}" alt=""></image>
+        </view>
+      </view>
     </view>
   </view>
 </view>

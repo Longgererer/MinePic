@@ -15,6 +15,7 @@ Page({
     tabs: ['列表', '视频', '上传'],
     home: true,
     showLoading: true,
+    topLen: 0,
     stv: {
       windowWidth: 0,
       lineWidth: 0,
@@ -34,55 +35,45 @@ Page({
       }
     ],
     topInfo: [
-      {image: "../../images/pic1.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"},
-      {image: "../../images/pic2.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"},
-      {image: "../../images/pic3.jpg", content: "商品描述商品描述商品描述商品描述商品描述商品描述"}
     ],
     photosInfo: [
-      {image: "../../images/pic1.jpg", tags: ["标签1", "标签2", "标签3"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic2.jpg", tags: ["标签1", "标签2"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic3.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic4.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic5.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic1.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic2.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
-      {image: "../../images/pic3.jpg", tags: ["标签1"], content: "商品描述商品描述商品描述商品描述商品描述商品描述", length: 9, time: "2019/04/03"},
     ],
     videoInfo: [
-      {
-        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      },
-      {
-        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      },
-      {
-        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      },
-      {
-        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      },
-      {
-        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      },
-      {
-        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      }
+      // {
+      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      // },
+      // {
+      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      // },
+      // {
+      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      // },
+      // {
+      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      // },
+      // {
+      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      // },
+      // {
+      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      // }
     ],
     tabIndex: 0
   },
   onLoad: function () {
+    wx.showLoading()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -106,19 +97,75 @@ Page({
         }
       })
     }
-    app.showLoad()
+    wx.request({
+      url: 'http://39.97.184.156/weice/public/index/albumlst/index',
+      data: {
+        openid: app.globalData.openid
+      },
+      method: 'GET',
+      header: {
+        'content-type': 'application/json'
+      },
+      success: res => {
+        if(res.statusCode == 200) {
+          const url = 'http://39.97.184.156/weice/public/'
+          const arr = res.data.reverse()
+          console.log(res.data)
+          let info = []
+          arr.forEach(function (item) {
+            let arrInfo = {
+              length: item.toutle,
+              time: item.create_time,
+              content: item.describes,
+              status: item.is_hot,
+              route_dy_id: item.route_dy_id,
+              tags: item.tabname,
+              image: url + item.thumb_route
+            }
+            info.push(arrInfo)
+          })
+          this.setData({
+            photosInfo: info
+          })
+          this.countTop()
+        } else {
+          console.log(res.errMsg)
+        }
+      }
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 100)
+  },
+  onShow: function () {
+    this.countTop()
+  },
+  countTop: function () {
+    let a = 0;
+    let arr = this.data.photosInfo
+    let length = arr.length
+    for( let i = length - 1 ; i >= 0; i --){
+      if(arr[i].status == 1){
+        a ++;
+      }
+    }
+    this.setData({
+      topLen: a
+    })
   },
   changeTab: function(e){
     let index = e.target.dataset.index
     this.setData({
       tabIndex: index
     })
-    app.showLoad()
   },
   showMyDicPreview(e){
+    let index = e.currentTarget.dataset.index
+    let toplen = e.currentTarget.dataset.toplen
+    console.log(e.currentTarget.dataset.info)
     let info = JSON.stringify(e.currentTarget.dataset.info)
     wx.navigateTo({
-      url: `../mydicpreview/mydicpreview?previewInfo=${info}`
+      url: `../mydicpreview/mydicpreview?previewInfo=${info}&index=${index}&toplen=${toplen}`
     })
   },
   toWeb(){
@@ -126,4 +173,14 @@ Page({
       url: "../toweb/toweb"
     })
   },
+  rearrangeByTime(){
+    let arr = this.data.photosInfo
+    let topArr = this.data.topInfo
+    let length = arr.length
+    for( let i = length - 1 ; i >= 0; i --){
+      if(arr[i].status == 1){
+        topArr.push(arr[i])
+      }
+    }
+  }
 })

@@ -22,6 +22,26 @@ Page({
     fans: 20
   },
   onLoad: function () {
+    // 查看是否授权
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: res => {
+              console.log(res.rawData)
+              wx.switchTab({
+                url: '../my/my'
+              })
+            }
+          });
+        }else{
+          wx.redirectTo({
+            url: '../login/login'
+          })
+        }
+      }
+      
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -50,7 +70,7 @@ Page({
     }
   },
   onShow: function(){
-    app.showLoad()
+    // app.showLoad()
   }
 })
 

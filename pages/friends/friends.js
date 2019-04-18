@@ -5,30 +5,70 @@ Page({
     tabIndex: 0,
     friendsInfo: [
       {
-        headImg: '../../images/friends.png',
-        nickName: '王花花',
+        headImg: '../../images/qq.png',
+        nickName: '微商张三',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '李二蛋',
+        headImg: '../../images/qq.png',
+        nickName: '微商小王',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '蔡狗剩',
+        headImg: '../../images/qq.png',
+        nickName: '微商阿华',
+      },
+      {
+        headImg: '../../images/qq.png',
+        nickName: '微商李四',
+      },
+      {
+        headImg: '../../images/qq.png',
+        nickName: '微商王五',
+      },
+      {
+        headImg: '../../images/qq.png',
+        nickName: '微商大鹏',
+      },
+      {
+        headImg: '../../images/qq.png',
+        nickName: '微商服饰',
+      },
+      {
+        headImg: '../../images/qq.png',
+        nickName: '微商小志',
       }
     ],
     attentionInfo: [
       {
         headImg: '../../images/friends.png',
-        nickName: '黄小丫',
+        nickName: '小李',
       },
       {
         headImg: '../../images/friends.png',
-        nickName: '麻花藤',
+        nickName: '小张',
       },
       {
         headImg: '../../images/friends.png',
-        nickName: '贺大炮',
+        nickName: '丁一',
+      },
+      {
+        headImg: '../../images/friends.png',
+        nickName: '王二',
+      },
+      {
+        headImg: '../../images/friends.png',
+        nickName: '阿飞',
+      },
+      {
+        headImg: '../../images/friends.png',
+        nickName: '大黎',
+      },
+      {
+        headImg: '../../images/friends.png',
+        nickName: '小瑟',
+      },
+      {
+        headImg: '../../images/friends.png',
+        nickName: '大军',
       }
     ]
   },
@@ -37,6 +77,6 @@ Page({
     this.setData({
       tabIndex: index
     })
-    app.showLoad()
+    // app.showLoad()
   },
 })

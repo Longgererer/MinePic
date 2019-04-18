@@ -14,7 +14,7 @@ Page({
         userImg: "../../images/qq.png",
         nickName: "微商张三",
         createTime: "刚刚",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+        contentText: "这是，刚新出的鞋子，一双99包邮，欢迎大家砸单！！",
         contentImg: [
           "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
           "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
@@ -246,7 +246,8 @@ Page({
       })
     },1500);
   },
-  onLoad: function (options) {
+  onLoad: function () {
+    wx.hideLoading()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -274,23 +275,30 @@ Page({
       })
     }
     wx.request({
-      url: 'http://110.64.211.2/weice/public/index/albumlst/index',
+      url: 'http://110.64.211.2/weice/public/index/index',
       data: {
-        openid: this.globalData.openid
+        openid: app.globalData.openid
       },
-      method: 'POST',
+      method: 'GET',
       header: {
         'content-type': 'application/json'
       },
       success: res => {
         if(res.statusCode == 200) {
-          console.log(res.data)
+          console.log(res.data.reverse())
+          this.setData({
+
+          })
         } else {
           console.log(res.errMsg)
         }
       }
     })
-
+    
+    // console.log(1)
+    // setTimeout(function () {
+    //   wx.hideLoading()
+    // }, 500)
     // var url = "https://api.weixin.qq.com/wxa/getwxacodeunlimit?access_token="+accessToken;
     // if (options) {
     //   url = options.url;
@@ -298,9 +306,6 @@ Page({
     // }
     // var size = this.setCanvasSize(); //动态设置画布大小 
     // this.createQrCode(url, "mycanvas", size.w, size.h);   
-  },
-  onShow: function(){
-    app.showLoad()
   },
   getUserInfo: function (e) {
     console.log(e)

@@ -1,18 +1,17 @@
 {
   "pages": [
-    "pages/login/login",
-    "pages/index/index",
-    "pages/dynamic/dynamic",
-    "pages/upload/upload",
-    "pages/mypic/mypic",
     "pages/my/my",
+    "pages/login/login",
+    "pages/dynamic/dynamic",
+    "pages/mypic/mypic",
     "pages/preview/preview",
     "pages/mydicpreview/mydicpreview",
     "pages/tablist/tablist",
     "pages/toweb/toweb",
     "pages/friends/friends",
     "pages/fans/fans",
-    "pages/qrcode/qrcode"
+    "pages/qrcode/qrcode",
+    "pages/upload/upload"
   ],
   "window": {
     "navigationBarTitleText": "微商相册",

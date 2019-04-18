@@ -23,10 +23,17 @@
   </view>
   <view class="container" hidden="{{tabIndex !== 0}}">
     <view class="top">
-      <my-top wx:for="{{topInfo}}" wx:key="{{index}}" content="{{item}}" data-info="{{item}}" bindtap="showMyDicPreview"></my-top>
+      <my-top wx:for="{{photosInfo}}" wx:if="{{item.status == '1'}}" wx:key="{{index}}" content="{{item}}" data-info="{{item}}" data-toplen="{{topLen}}" data-index="{{index}}" bindtap="showMyDicPreview"></my-top>
+      <view class="blank-view" wx:for="{{3-topLen}}">
+        <text class="blank-view-text">暂无置顶图集</text>
+      </view>
     </view>
-    <view class="photos">
-      <my-photos wx:for="{{photosInfo}}" wx:key="{{index}}" data-info="{{item}}" photosInfo="{{item}}" bindtap="showMyDicPreview"></my-photos>
+    <view class="photos {{photosInfo.length == 0 ? '' : 'shadow'}}">
+      <my-photos wx:for="{{photosInfo}}" wx:key="{{index}}" data-info="{{item}}" photosInfo="{{item}}" data-index="{{index}}" data-topLen="{{topLen}}" bindtap="showMyDicPreview"></my-photos>
+      <view wx:if="{{photosInfo.length == 0}}" class="blank-view">
+        <text>图集空空如也</text>
+        <text>快去上传吧</text>
+      </view>
     </view>
   </view>
   <view class="container video-box" hidden="{{tabIndex !== 1}}">

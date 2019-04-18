@@ -66,10 +66,32 @@ page {
    height: 210rpx;
    box-shadow: 0 4px 5px 0px #bebebe;
  }
+ .top .blank-view{
+    width: 210rpx;
+    height: 210rpx;
+    box-shadow: 0 4px 5px 0px #bebebe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .blank-view-text{
+   color: #818181;
+   font-size: 16px;
+ }
 .photos{
   width: 95%;
-  box-shadow: 0 2px 5px 0px #bebebe;
   margin-bottom: 20rpx;
+}
+.shadow{
+  box-shadow: 0 2px 5px 0px #bebebe;
+}
+.photos .blank-view{
+  margin-top: 200rpx;
+  color: #818181;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 my-photos{
   width: 100%;

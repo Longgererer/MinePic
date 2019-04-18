@@ -44,9 +44,11 @@ page{
 .content-img{
   margin-top: 30rpx;
   background-color: #fff;
+  height: 230px;
 }
 .content-img image{
   width: 100%;
+  height: 230px;
 }
 .button-view{
   width: 100%;
