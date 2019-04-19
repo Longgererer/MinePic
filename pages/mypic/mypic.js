@@ -16,6 +16,8 @@ Page({
     home: true,
     showLoading: true,
     topLen: 0,
+    isBlankShow: false,
+    isInfoShow: false,
     stv: {
       windowWidth: 0,
       lineWidth: 0,
@@ -73,7 +75,9 @@ Page({
     tabIndex: 0
   },
   onLoad: function () {
-    wx.showLoading()
+    wx.showLoading({
+      title: '加载中...'
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
@@ -109,11 +113,13 @@ Page({
       success: res => {
         if(res.statusCode == 200) {
           const arr = res.data.reverse()
-          console.log(res.data)
           let info = []
           arr.forEach(function (item) {
+            // if(item.toutel >= 2){
+            //   item.toutel.split(',')
+            // }
             let arrInfo = {
-              length: item.toutle,
+              length: item.toutel,
               time: item.create_time,
               content: item.describes,
               status: item.is_hot,
@@ -124,17 +130,19 @@ Page({
             info.push(arrInfo)
           })
           this.setData({
-            photosInfo: info
+            photosInfo: info,
+            isBlankShow: true,
+            isInfoShow: true
           })
           this.countTop()
         } else {
           console.log(res.errMsg)
         }
+        setTimeout(function () {
+          wx.hideLoading()
+        }, 100)
       }
     })
-    setTimeout(function () {
-      wx.hideLoading()
-    }, 100)
   },
   onShow: function () {
     this.countTop()

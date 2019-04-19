@@ -247,7 +247,9 @@ Page({
     },1500);
   },
   onLoad: function () {
-    wx.showLoading()
+    wx.showLoading({
+      title: '加载中...'
+    })
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,

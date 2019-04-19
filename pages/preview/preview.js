@@ -27,41 +27,44 @@ Page({
         })
         console.log(options.previewInfo)
         let info = JSON.parse(options.previewInfo)
-        console.log(info)
         this.setData({
             imgUrls: info.contentImg,
             contentText: info.contentText,
             route_dy_id: info.route_dy_id
         })
-        wx.request({
-            url: '',
-            methods: 'GET',
-            header: {
-                'content-type': 'application/json'
-            },
-            data: {
-                route_dy_id: info.route_dy_id
-            },
-            // success: res => {
-            //     if(res.statusCode == 200){
-            //         console.log(res.data)
-            //     }
-            //     if (this.data.imgUrls.length <= 4) {
-            //         console.log(this.data.imgUrls.length)
-            //         this.setData({
-            //             isHide: true,
-            //             current: 0
-            //         })
-            //     } else {
-            //         let previewImgs = this.rearrange(this.data.previewImgs)
-            //         let imgUrls = this.rearrange(this.data.imgUrls)
-            //         this.setData({
-            //             previewImgs,
-            //             imgUrls
-            //         })
-            //     }
-            // }
-        })
+        if (this.data.imgUrls.length <= 4) {
+            console.log(this.data.imgUrls.length)
+            this.setData({
+                isHide: true,
+                current: 0
+            })
+        }else{
+            let imgUrls = this.rearrange(this.data.imgUrls)
+            this.setData({
+                imgUrls
+            })
+        }
+        // wx.request({
+        //     url: '',
+        //     methods: 'GET',
+        //     header: {
+        //         'content-type': 'application/json'
+        //     },
+        //     data: {
+        //         route_dy_id: info.route_dy_id
+        //     },
+        //     success: res => {
+        //         if(res.statusCode == 200){
+        //             console.log(res.data)
+        //         }
+        //         if (this.data.imgUrls.length > 4) {
+        //             let previewImgs = this.rearrange(this.data.previewImgs)
+        //             this.setData({
+        //                 previewImgs
+        //             })
+        //         }
+        //     }
+        // })
     },
     rearrange: function (arr) {
         let reArr = arr
@@ -86,4 +89,10 @@ Page({
             whole: !this.data.whole
         })
     },
+    changeVBImg: function (e) {
+        let current = e.currentTarget.dataset.index
+        this.setData({
+            current
+        })
+    }
 })
