@@ -10,102 +10,102 @@ Page({
     canvasHidden: true,
     imagePath: '',
     activeInfo: [
-      {
-        userImg: "../../images/qq.png",
-        nickName: "微商张三",
-        createTime: "刚刚",
-        contentText: "这是，刚新出的鞋子，一双99包邮，欢迎大家砸单！！",
-        contentImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ],
-        originalImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ]
-      },
-      {
-        userImg: "../../images/qq.png",
-        nickName: "微商张三",
-        createTime: "半小时前",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-        contentImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ],
-        originalImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ]
-      },
-      {
-        userImg: "../../images/qq.png",
-        nickName: "微商李四",
-        createTime: "两小时前",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-        contentImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ],
-        originalImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ]
-      },
-      {
-        userImg: "../../images/qq.png",
-        nickName: "微商张三",
-        createTime: "昨天",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-        contentImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ],
-        originalImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ]
-      },
-      {
-        userImg: "../../images/qq.png",
-        nickName: "微商李四",
-        createTime: "三天前",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-        contentImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ],
-        originalImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ]
-      },
-      {
-        userImg: "../../images/qq.png",
-        nickName: "微商李四",
-        createTime: "一年前",
-        contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-        contentImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ],
-        originalImg: [
-          "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-          "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-          "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-        ]
-      }
+      // {
+      //   userImg: "../../images/qq.png",
+      //   nickName: "微商张三",
+      //   createTime: "刚刚",
+      //   contentText: "这是，刚新出的鞋子，一双99包邮，欢迎大家砸单！！",
+      //   contentImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ],
+      //   originalImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ]
+      // },
+      // {
+      //   userImg: "../../images/qq.png",
+      //   nickName: "微商张三",
+      //   createTime: "半小时前",
+      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+      //   contentImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ],
+      //   originalImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ]
+      // },
+      // {
+      //   userImg: "../../images/qq.png",
+      //   nickName: "微商李四",
+      //   createTime: "两小时前",
+      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+      //   contentImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ],
+      //   originalImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ]
+      // },
+      // {
+      //   userImg: "../../images/qq.png",
+      //   nickName: "微商张三",
+      //   createTime: "昨天",
+      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+      //   contentImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ],
+      //   originalImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ]
+      // },
+      // {
+      //   userImg: "../../images/qq.png",
+      //   nickName: "微商李四",
+      //   createTime: "三天前",
+      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+      //   contentImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ],
+      //   originalImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ]
+      // },
+      // {
+      //   userImg: "../../images/qq.png",
+      //   nickName: "微商李四",
+      //   createTime: "一年前",
+      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
+      //   contentImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ],
+      //   originalImg: [
+      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
+      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
+      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
+      //   ]
+      // }
     ]
   },
   //发布时间
@@ -247,15 +247,13 @@ Page({
     },1500);
   },
   onLoad: function () {
-    wx.hideLoading()
+    wx.showLoading()
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true
       })
     } else if (this.data.canIUse) {
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
       app.userInfoReadyCallback = res => {
         this.setData({
           userInfo: res.userInfo,
@@ -263,7 +261,6 @@ Page({
         })
       }
     } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
       wx.getUserInfo({
         success: res => {
           app.globalData.userInfo = res.userInfo
@@ -275,7 +272,7 @@ Page({
       })
     }
     wx.request({
-      url: 'http://110.64.211.2/weice/public/index/index',
+      url: 'http://39.97.184.156/weice/public/index/index/show',
       data: {
         openid: app.globalData.openid
       },
@@ -285,10 +282,29 @@ Page({
       },
       success: res => {
         if(res.statusCode == 200) {
-          console.log(res.data.reverse())
-          this.setData({
-
+          console.log(res.data)
+          let arr = res.data.reverse()
+          let info = []
+          
+          arr.forEach(function (item, index) {
+            let arrInfo = {
+              userImg: item.headimgurl,
+              nickName: item.nickname,
+              createTime: item.create_time,
+              miniTime: '',
+              contentText: item.describes,
+              contentImg: item.thumb_route,
+              originalImg: item.route,
+              route_dy_id: item.route_dy_id
+            }
+            info.push(arrInfo)
           })
+          this.setData({
+            activeInfo: info
+          })
+          setTimeout(() => {
+            wx.hideLoading()
+          }, 100);
         } else {
           console.log(res.errMsg)
         }

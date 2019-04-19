@@ -108,7 +108,6 @@ Page({
       },
       success: res => {
         if(res.statusCode == 200) {
-          const url = 'http://39.97.184.156/weice/public/'
           const arr = res.data.reverse()
           console.log(res.data)
           let info = []
@@ -120,7 +119,7 @@ Page({
               status: item.is_hot,
               route_dy_id: item.route_dy_id,
               tags: item.tabname,
-              image: url + item.thumb_route
+              image: item.thumb_route
             }
             info.push(arrInfo)
           })
@@ -162,7 +161,6 @@ Page({
   showMyDicPreview(e){
     let index = e.currentTarget.dataset.index
     let toplen = e.currentTarget.dataset.toplen
-    console.log(e.currentTarget.dataset.info)
     let info = JSON.stringify(e.currentTarget.dataset.info)
     wx.navigateTo({
       url: `../mydicpreview/mydicpreview?previewInfo=${info}&index=${index}&toplen=${toplen}`

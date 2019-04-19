@@ -9,7 +9,7 @@
     <view wx:else='{{!empty}}' class='active'>
       <view wx:for="{{activeInfo}}" wx:key="{{index}}">
         <active userImg="{{item.userImg}}" nickName="{{item.nickName}}" 
-        createTime="{{item.createTime}}" contentText="{{item.contentText}}" 
+        createTime="{{item.createTime}}" contentText="{{item.contentText}}" route_dy_id="{{item.route_dy_id}}" 
         contentImg="{{item.contentImg}}" bind:share="showShare" bind:download="batchDownload" bind:showPreview="showPreview"></active>
         <view class="test"></view>
       </view>

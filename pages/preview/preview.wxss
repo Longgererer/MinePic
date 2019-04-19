@@ -80,7 +80,21 @@ swiper-item image{
     transition: all 0.3s ease;
     opacity: 0.8;
 }
+.view-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.view-box-content{
+    margin: 0 10rpx;
+}
 .active{
     transform: scale(1.2);
     opacity: 1;
+}
+.border{
+    border: 2px solid orange;
+}
+.opacity{
+    opacity: .6;
 }

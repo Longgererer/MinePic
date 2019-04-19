@@ -1,7 +1,7 @@
 <view class="preview-bg" style="width:{{winWidth}}px;height:{{winHeight}}px">
   <view class="content">
     <view class="top-box">
-      <button class="top-button {{status == 1 ? 'bt-color' : ''}}" bindtap="changeTop">{{status == 1 ? "已置顶" : "置顶"}}</button>
+      <button class="top-button {{status == 1 ? 'bt-color' : ''}}" bindtap="changeTop">{{status == 1 ? "取消置顶" : "置顶"}}</button>
     </view>
     <view class="original-img">
       <image src="{{previewImgs[current]}}" mode="aspectFit"></image>

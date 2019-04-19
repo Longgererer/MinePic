@@ -5,7 +5,8 @@ Component({
     nickName: String,
     createTime: String,
     contentText: String,
-    contentImg: Array
+    contentImg: Array,
+    route_dy_id: String
   },
   data: {
     whole: false
@@ -25,7 +26,8 @@ Component({
     toPreview(e){
       let info = {
         contentText: this.properties.contentText,
-        contentImg: this.properties.contentImg
+        contentImg: this.properties.contentImg,
+        route_dy_id: this.properties.route_dy_id
       }
       this.triggerEvent('showPreview', info)
     }

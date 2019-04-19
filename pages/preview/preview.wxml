@@ -4,7 +4,7 @@
       <image src="{{previewImgs[current]}}" mode="widthFix"/>
     </view>
     <view class="content-text" bindtap="showText">
-      <text class="{{whole?'':'show-text'}}">{{contentText}}文字未加载文字未加载文字未加载文字未加载文字未加载文字未加载文字未加载文字未加载</text>
+      <text class="{{whole?'':'show-text'}}">{{contentText}}</text>
     </view>
   </view>
   <view class="thumbnail">
@@ -16,6 +16,11 @@
           </swiper-item>
         </block>
       </swiper>
+      <view class="view-box" wx:if="{{isHide}}">
+        <view class="view-box-content" wx:for="{{imgUrls}}" wx:key="{{index}}" data-index="{{index}}" bindtap="changeVBImg">
+          <image class="{{index == current ? 'border' : 'opacity'}}" src="{{item}}" alt=""></image>
+        </view>
+      </view>
     </view>
   </view>
 </view>

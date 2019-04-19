@@ -4,41 +4,69 @@ Page({
         winWidth: "",
         winHeight: "",
         imgUrls: [],
-        previewImgs: [
-            '../../images/pic1.jpg',
-            '../../images/pic2.jpg',
-            '../../images/pic3.jpg',
-            '../../images/pic4.jpg',
-            '../../images/pic5.jpg',
-            '../../images/pic1.jpg',
-            '../../images/pic2.jpg',
-            '../../images/pic3.jpg',
-            '../../images/pic4.jpg'
-        ],
+        previewImgs: [],
         contentText: '',
         current: 1,
         circular: true,
         previousMargin:'100rpx',
         nextMargin:'100rpx',
         displayMultipleItems: 3,
-        whole: false
+        whole: false,
+        route_dy_id: '',
+        isHade: false
     },
     onLoad: function(options){
+        // app.showLoad()
         wx.getSystemInfo({
             success: (res) => {
                 this.setData({
                     winWidth: res.windowWidth,
                     winHeight: res.windowHeight
-                });
+                })
             }
-        });
-        app.showLoad()
+        })
         console.log(options.previewInfo)
         let info = JSON.parse(options.previewInfo)
+        console.log(info)
         this.setData({
             imgUrls: info.contentImg,
-            contentText: info.contentText
+            contentText: info.contentText,
+            route_dy_id: info.route_dy_id
         })
+        wx.request({
+            url: '',
+            methods: 'GET',
+            header: {
+                'content-type': 'application/json'
+            },
+            data: {
+                route_dy_id: info.route_dy_id
+            },
+            // success: res => {
+            //     if(res.statusCode == 200){
+            //         console.log(res.data)
+            //     }
+            //     if (this.data.imgUrls.length <= 4) {
+            //         console.log(this.data.imgUrls.length)
+            //         this.setData({
+            //             isHide: true,
+            //             current: 0
+            //         })
+            //     } else {
+            //         let previewImgs = this.rearrange(this.data.previewImgs)
+            //         let imgUrls = this.rearrange(this.data.imgUrls)
+            //         this.setData({
+            //             previewImgs,
+            //             imgUrls
+            //         })
+            //     }
+            // }
+        })
+    },
+    rearrange: function (arr) {
+        let reArr = arr
+        reArr.unshift(reArr.pop())
+        return reArr
     },
     swiperChange: function (e) {
         let current = e.detail.current + 1

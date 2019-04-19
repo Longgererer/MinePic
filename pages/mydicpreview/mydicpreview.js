@@ -44,20 +44,24 @@ Page({
             },
             success: res => {
                 if(res.statusCode == 200){
-                    console.log(res.data)
-                    const url = 'http://39.97.184.156/weice/public/'
-                    let imgUrls = res.data.thumb_route
-                    imgUrls.forEach(function (item, index) {
-                        imgUrls[index] = url + item
-                    })
-                    let previewImgs = res.data.route
-                    previewImgs.forEach(function (item, index) {
-                        previewImgs[index] = url + item
-                    })
                     this.setData({
-                        imgUrls,
-                        previewImgs
+                        imgUrls: res.data.thumb_route,
+                        previewImgs: res.data.route
                     })
+                    if (this.data.imgUrls.length <= 4) {
+                        console.log(this.data.imgUrls.length)
+                        this.setData({
+                            isHide: true,
+                            current: 0
+                        })
+                    } else {
+                        let previewImgs = this.rearrange(this.data.previewImgs)
+                        let imgUrls = this.rearrange(this.data.imgUrls)
+                        this.setData({
+                            previewImgs,
+                            imgUrls
+                        })
+                    }
                 }else{
                     console.log(res.errMsg)
                 }
@@ -70,19 +74,6 @@ Page({
             index,
             topLen
         })
-        if (this.data.imgUrls.length <= 4) {
-            this.setData({
-                isHide: true,
-                current: 0
-            })
-        } else {
-            let previewImgs = this.rearrange(this.data.previewImgs)
-            let imgUrls = this.rearrange(this.data.imgUrls)
-            this.setData({
-                previewImgs,
-                imgUrls
-            })
-        }
         setTimeout(function () {
             wx.hideLoading()
         }, 100)
