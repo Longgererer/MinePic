@@ -16,7 +16,9 @@
   "window": {
     "navigationBarTitleText": "微商相册",
     "navigationBarTextStyle": "black",
-    "navigationBarBackgroundColor": "#ffffff"
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundTextStyle":"dark",
+    "enablePullDownRefresh": true
   },
   "tabBar": {
     "list": [

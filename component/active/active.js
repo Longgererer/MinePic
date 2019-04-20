@@ -19,7 +19,11 @@ Component({
       })
     },
     share(){
-      this.triggerEvent('share')
+      let info = {
+        originalImg: this.properties.originalImg[0],
+        contentText: this.properties.contentText
+      }
+      this.triggerEvent('share', info)
     },
     downloadImg(e){
       let info = {

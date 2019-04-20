@@ -26,41 +26,41 @@ Page({
       },
       {
         headImg: '../../images/qq.png',
-        nickName: '微商大鹏',
+        nickName: '安之若素',
       }
     ],
     attentionInfo: [
       {
-        headImg: '../../images/friends.png',
-        nickName: '小李',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/258.jpg',
+        nickName: 'Alice',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '小张',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/456.jpg',
+        nickName: '大红莲',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '丁一',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/789.jpg',
+        nickName: '等风来',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '王二',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/123.jpg',
+        nickName: '独步天下',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '阿飞',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/369.jpg',
+        nickName: '呱呱',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '大黎',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/111.jpg',
+        nickName: 'HR 张良',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '小瑟',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/222.jpg',
+        nickName: '华仔',
       },
       {
-        headImg: '../../images/friends.png',
-        nickName: '大军',
+        headImg: 'http://39.97.184.156/weice/public/uploads/TX/thumb/20190419/333.jpg',
+        nickName: '校多粉',
       }
     ]
   },
@@ -69,6 +69,5 @@ Page({
     this.setData({
       tabIndex: index
     })
-    // app.showLoad()
   },
 })

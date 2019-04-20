@@ -11,38 +11,38 @@ Page({
     imagePath: '',
     activeInfo: []
   },
-  //发布时间
-  releaseTime: function(){
-    let min = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getMinutes();
-    let str = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}  ${date.getHours()}:${min}`;
-    return str;
-  },
   imageArrDownLoad: function(obj) {
-    let success = obj.success; 
-    let urls = obj.urls;  
+    let success = obj.success
+    let urls = obj.urls
+    let len = urls.length
     let savedFilePaths = new Map();
+    let bar = this.downloadToast()
     for (let i = urls.length; i--;) {
       this.downloadOneFile({
             url: urls[i],
             success: res => {
-                savedFilePaths.set(res.id, res);
+                savedFilePaths.set(res.id, res)
                 if (savedFilePaths.size == urlsLength) {
                     if (success){
                       console.log(1)
                         success(savedFilePaths)
                     }
                 }
-            }
+            },
+            len,
+            callback: bar
         })
     }
   },
   downloadOneFile: function(obj) {
-    let id = "";
-    let url = obj.url;
+    let id = ""
+    let url = obj.url
+    let len = obj.len
+    let callback = obj.callback
     if (obj.id){
-        id = obj.id;
+        id = obj.id
     }else{
-        id = url;
+        id = url
     }
     const downloadTask = wx.downloadFile({
         url: obj.url,
@@ -62,10 +62,23 @@ Page({
         }
     })
     downloadTask.onProgressUpdate((res) => {
-      console.log('下载进度', res.progress)
-      console.log('已经下载的数据长度', res.totalBytesWritten)
-      console.log('预期需要下载的数据总长度', res.totalBytesExpectedToWrite)
+      if(res.progress == 100){
+        callback(len)
+      }
     })
+  },
+  downloadToast: function(){
+    let i = 0
+    return function (len) {
+      wx.showLoading({
+        title: `下载中：${++i} / ${len}`
+      })
+      if(i >= len){
+        setTimeout(() => {
+          wx.hideLoading()
+        }, 500)
+      }
+    }
   },
   //批量下载
   //不能是网络图片
@@ -90,7 +103,13 @@ Page({
   },
   //分享
   //展示对话框
-  showShare: function () {
+  showShare: function (e) {
+    const info = e.detail
+    this.setData({
+      temporaryText: info.contentText,
+      temporaryImg: info.originalImg
+    })
+    console.log(e.detail)
     // 显示遮罩层
     var animation = wx.createAnimation({
       duration: 200,
@@ -134,9 +153,9 @@ Page({
   onShareAppMessage() {
     this.hideModal();
     return {
-      title: '快来关注我的微商相册😀！',
-      imageUrl: 'https://wx.qlogo.cn/mmopen/vi_32/fUD2TOdz2ddLAurrQXpJ0aUJZVJOtc2Y6fdJSnLELLBk0HXrekK1sTN1eCE85KdYibIp8LW9d8f98QEpVceIGMg/132',
-      path: '/page/dynamic/dynamic',
+      title: this.data.temporaryText,
+      imageUrl: this.data.temporaryImg,
+      path: '/pages/dynamic/dynamic',
       success: res => {
         setTimeout(function(){wx.showToast({  
           title: '分享成功！',  
@@ -238,6 +257,7 @@ Page({
               route_dy_id: item.route_dy_id
             }
             info.push(arrInfo)
+            wx.stopPullDownRefresh()
           })
           this.setData({
             activeInfo: info
@@ -250,7 +270,6 @@ Page({
         }
       }
     })
-    
     // console.log(1)
     // setTimeout(function () {
     //   wx.hideLoading()
@@ -320,9 +339,11 @@ Page({
   //     }
   //   });
   // },
+  onPullDownRefresh(){
+    this.onLoad()
+  },
   showPreview: function(e){
     let info = JSON.stringify(e.detail)
-    console.log(info)
     wx.navigateTo({
       url: `../preview/preview?previewInfo=${info}`
     })

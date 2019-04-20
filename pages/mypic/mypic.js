@@ -136,6 +136,7 @@ Page({
             isInfoShow: true
           })
           this.countTop()
+          wx.stopPullDownRefresh()
         } else {
           console.log(res.errMsg)
         }
@@ -189,5 +190,8 @@ Page({
         topArr.push(arr[i])
       }
     }
+  },
+  onPullDownRefresh(){
+    this.onLoad()
   }
 })
