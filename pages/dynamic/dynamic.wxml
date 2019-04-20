@@ -1,16 +1,12 @@
-<!--pages/dynamic/dynamic.wxml-->
 <view>
-<!-- header:show userIcon and username -->
   <my-header userInfo='{{userInfo}}'></my-header>
-
-<!-- container -->
   <view class='container' >
     <button wx:if='{{empty}}' bindtap='_toAdd'  >我要上传</button>
     <view wx:else='{{!empty}}' class='active'>
       <view wx:for="{{activeInfo}}" wx:key="{{index}}">
         <active userImg="{{item.userImg}}" nickName="{{item.nickName}}" 
         createTime="{{item.createTime}}" contentText="{{item.contentText}}" route_dy_id="{{item.route_dy_id}}" 
-        contentImg="{{item.contentImg}}" bind:share="showShare" bind:download="batchDownload" bind:showPreview="showPreview"></active>
+        contentImg="{{item.contentImg}}" originalImg="{{item.originalImg}}" bind:share="showShare" bind:download="batchDownload" bind:showPreview="showPreview"></active>
         <view class="test"></view>
       </view>
     </view>
@@ -46,8 +42,8 @@
           <view class="line"></view>
           <text class="notice">保存图片到手机，分享到朋友圈</text>
           <view class="qrcode" hover-class="none" hover-stop-propagation="false">
-            <image bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
-            <canvas hidden="true" style="width: 400rpx;height: 400rpx;background:#f1f1f1;" canvas-id="mycanvas" ></canvas>
+            <image bindtap="previewImg" style="width: 400rpx;height: 400rpx;" src="http://39.97.184.156/weice/public/uploads/erweima.jpg"></image>
+            <!-- <canvas hidden="true" style="width: 400rpx;height: 400rpx;background:#f1f1f1;" canvas-id="mycanvas" ></canvas> -->
           </view>
           <view class="save-button">
             <button bindtap="hideCircle">取消</button>

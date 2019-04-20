@@ -5,36 +5,28 @@ Page({
     tabIndex: 0,
     friendsInfo: [
       {
-        headImg: '../../images/qq.png',
-        nickName: '微商张三',
+        headImg: 'https://wx.qlogo.cn/mmopen/vi_32/KWfwatrwK3D1b1wsfdJ4aQrxwR12q3sgp2ywN2VJXDzrgm9MJ7wBJ7YRxOtlYmeeJxEjX8ygrficB0pMpc9WBMA/132',
+        nickName: '通',
       },
       {
-        headImg: '../../images/qq.png',
-        nickName: '微商小王',
+        headImg: 'https://wx.qlogo.cn/mmopen/vi_32/SglXzIyKPqTibZXOhXlAQLn5Ud6A2t7F7Y67d0BZYpg3AQ5gZBwXpf8WXIGcicl3qdRqpBW0iaequXoN5bvr2uREg/132',
+        nickName: '会飞的鱼',
       },
       {
-        headImg: '../../images/qq.png',
-        nickName: '微商阿华',
+        headImg: 'https://wx.qlogo.cn/mmopen/vi_32/ibthrJzWeVG25nAaJKbRyjk9rW7wSEj01k9t6cicoDucSiberQ0MvGgYtuosI1e4vd9ExibJF7qH5OVibpPAyftMocw/132',
+        nickName: '彼得潘',
       },
       {
-        headImg: '../../images/qq.png',
-        nickName: '微商李四',
+        headImg: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLBXbTHWJQ8Gr8tKhtH14kQhibvVVNSIe1up0ic2de5pjj7N2ApokiaI3kiaV8hElsybK7BXv2xicASYicg/132',
+        nickName: '林木木',
       },
       {
-        headImg: '../../images/qq.png',
-        nickName: '微商王五',
+        headImg: 'https://wx.qlogo.cn/mmopen/vi_32/qkkxmNycW0kYqbGhCvMcgiaQepIsiaH7ia66ibwzHpRwaQGSN0ouGSh5yMBEg44hCPY2ticGoaCkJKoMEDpZNH0dtOA/132',
+        nickName: '谢泳洧',
       },
       {
         headImg: '../../images/qq.png',
         nickName: '微商大鹏',
-      },
-      {
-        headImg: '../../images/qq.png',
-        nickName: '微商服饰',
-      },
-      {
-        headImg: '../../images/qq.png',
-        nickName: '微商小志',
       }
     ],
     attentionInfo: [

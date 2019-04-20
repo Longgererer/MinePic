@@ -16,7 +16,9 @@ Page({
         isHade: false
     },
     onLoad: function(options){
-        // app.showLoad()
+        wx.showLoading({
+            title: '加载中...'
+        })
         wx.getSystemInfo({
             success: (res) => {
                 this.setData({
@@ -25,10 +27,10 @@ Page({
                 })
             }
         })
-        console.log(options.previewInfo)
         let info = JSON.parse(options.previewInfo)
         this.setData({
             imgUrls: info.contentImg,
+            previewImgs: info.originalImg,
             contentText: info.contentText,
             route_dy_id: info.route_dy_id
         })
@@ -40,31 +42,15 @@ Page({
             })
         }else{
             let imgUrls = this.rearrange(this.data.imgUrls)
+            let previewImgs = this.rearrange(this.data.previewImgs)
             this.setData({
-                imgUrls
+                imgUrls,
+                previewImgs
             })
         }
-        // wx.request({
-        //     url: '',
-        //     methods: 'GET',
-        //     header: {
-        //         'content-type': 'application/json'
-        //     },
-        //     data: {
-        //         route_dy_id: info.route_dy_id
-        //     },
-        //     success: res => {
-        //         if(res.statusCode == 200){
-        //             console.log(res.data)
-        //         }
-        //         if (this.data.imgUrls.length > 4) {
-        //             let previewImgs = this.rearrange(this.data.previewImgs)
-        //             this.setData({
-        //                 previewImgs
-        //             })
-        //         }
-        //     }
-        // })
+        setTimeout(() => {
+            wx.hideLoading()
+        }, 100);
     },
     rearrange: function (arr) {
         let reArr = arr

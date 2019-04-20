@@ -9,104 +9,7 @@ Page({
     showModalStatus: false,
     canvasHidden: true,
     imagePath: '',
-    activeInfo: [
-      // {
-      //   userImg: "../../images/qq.png",
-      //   nickName: "微商张三",
-      //   createTime: "刚刚",
-      //   contentText: "这是，刚新出的鞋子，一双99包邮，欢迎大家砸单！！",
-      //   contentImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ],
-      //   originalImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ]
-      // },
-      // {
-      //   userImg: "../../images/qq.png",
-      //   nickName: "微商张三",
-      //   createTime: "半小时前",
-      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-      //   contentImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ],
-      //   originalImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ]
-      // },
-      // {
-      //   userImg: "../../images/qq.png",
-      //   nickName: "微商李四",
-      //   createTime: "两小时前",
-      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-      //   contentImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ],
-      //   originalImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ]
-      // },
-      // {
-      //   userImg: "../../images/qq.png",
-      //   nickName: "微商张三",
-      //   createTime: "昨天",
-      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-      //   contentImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ],
-      //   originalImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ]
-      // },
-      // {
-      //   userImg: "../../images/qq.png",
-      //   nickName: "微商李四",
-      //   createTime: "三天前",
-      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-      //   contentImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ],
-      //   originalImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ]
-      // },
-      // {
-      //   userImg: "../../images/qq.png",
-      //   nickName: "微商李四",
-      //   createTime: "一年前",
-      //   contentText: "商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......商品详情描述......",
-      //   contentImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ],
-      //   originalImg: [
-      //     "../../images/pic1.jpg","../../images/pic2.jpg","../../images/pic3.jpg",
-      //     "../../images/pic4.jpg","../../images/pic5.jpg","../../images/pic1.jpg",
-      //     "../../images/pic2.jpg","../../images/pic3.jpg","../../images/pic4.jpg"
-      //   ]
-      // }
-    ]
+    activeInfo: []
   },
   //发布时间
   releaseTime: function(){
@@ -114,29 +17,69 @@ Page({
     let str = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}  ${date.getHours()}:${min}`;
     return str;
   },
+  imageArrDownLoad: function(obj) {
+    let success = obj.success; 
+    let urls = obj.urls;  
+    let savedFilePaths = new Map();
+    for (let i = urls.length; i--;) {
+      this.downloadOneFile({
+            url: urls[i],
+            success: res => {
+                savedFilePaths.set(res.id, res);
+                if (savedFilePaths.size == urlsLength) {
+                    if (success){
+                      console.log(1)
+                        success(savedFilePaths)
+                    }
+                }
+            }
+        })
+    }
+  },
+  downloadOneFile: function(obj) {
+    let id = "";
+    let url = obj.url;
+    if (obj.id){
+        id = obj.id;
+    }else{
+        id = url;
+    }
+    const downloadTask = wx.downloadFile({
+        url: obj.url,
+        success: res => {
+            wx.saveImageToPhotosAlbum({
+              filePath: res.tempFilePath,
+              success: res => {
+                console.log('success')
+              },
+              fail: res => {
+                console.log('fail')
+              }
+            })
+        },
+        fail: e => {
+          console.log(e)
+        }
+    })
+    downloadTask.onProgressUpdate((res) => {
+      console.log('下载进度', res.progress)
+      console.log('已经下载的数据长度', res.totalBytesWritten)
+      console.log('预期需要下载的数据总长度', res.totalBytesExpectedToWrite)
+    })
+  },
   //批量下载
   //不能是网络图片
-  batchDownload: function(){
+  batchDownload: function(e){
     wx.showModal({
       title: '提示',
       content: '确认批量下载？',
-      success(res){
+      success: res => {
         if(res.confirm){
-          var imgSrc = "https://wx.qlogo.cn/mmopen/vi_32/fUD2TOdz2ddLAurrQXpJ0aUJZVJOtc2Y6fdJSnLELLBk0HXrekK1sTN1eCE85KdYibIp8LW9d8f98QEpVceIGMg/132"
-          wx.downloadFile({
-            url: imgSrc,
-            success:function (res) {
-              console.log(res);
-              //图片保存到本地
-              wx.saveImageToPhotosAlbum({
-                filePath: res.tempFilePath,
-                success:function (data) {
-                  console.log(data);
-                  wx.showToast({  
-                    title: '保存成功',  
-                  });  
-                },
-              })
+          let imgSrcArr = e.detail.originalImg
+          this.imageArrDownLoad({
+            urls: imgSrcArr,
+            success: res => {
+              console.log('success')
             }
           })
         }else{
@@ -188,13 +131,12 @@ Page({
       })
     }.bind(this), 200)
   },
-  //分享给好友
   onShareAppMessage() {
     this.hideModal();
     return {
-      title: '一大群王思聪正在吃热狗',
+      title: '快来关注我的微商相册😀！',
       imageUrl: 'https://wx.qlogo.cn/mmopen/vi_32/fUD2TOdz2ddLAurrQXpJ0aUJZVJOtc2Y6fdJSnLELLBk0HXrekK1sTN1eCE85KdYibIp8LW9d8f98QEpVceIGMg/132',
-      path: '/page/user?id=123', // 路径，传递参数到指定页面。
+      path: '/page/dynamic/dynamic',
       success: res => {
         setTimeout(function(){wx.showToast({  
           title: '分享成功！',  
@@ -202,10 +144,9 @@ Page({
       }
     }
   },
-  //分享朋友圈
   shareToCircle: function(){
     this.hideModal();
-    this.createQrCode();
+    // this.createQrCode();
     setTimeout(() => {
       this.setData({
         canvasHidden: false,
@@ -219,9 +160,8 @@ Page({
   },
   saveQr: function(){
     wx.downloadFile({
-      url: this.data.tempFilePath,
-      success:function (res) {
-        console.log(res);
+      url: "http://39.97.184.156/weice/public/uploads/erweima.jpg",
+      success: function (res) {
         //图片保存到本地
         wx.saveImageToPhotosAlbum({
           filePath: res.tempFilePath,
@@ -284,11 +224,9 @@ Page({
       },
       success: res => {
         if(res.statusCode == 200) {
-          console.log(res.data)
           let arr = res.data.reverse()
           let info = []
-          
-          arr.forEach(function (item, index) {
+          arr.forEach(function (item) {
             let arrInfo = {
               userImg: item.headimgurl,
               nickName: item.nickname,
@@ -384,6 +322,7 @@ Page({
   // },
   showPreview: function(e){
     let info = JSON.stringify(e.detail)
+    console.log(info)
     wx.navigateTo({
       url: `../preview/preview?previewInfo=${info}`
     })

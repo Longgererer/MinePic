@@ -8,7 +8,8 @@
         {{photosInfo.content}}
       </view>
       <view class="tag">
-        <text class="tag-text" wx:for="{{photosInfo.tags}}" wx:key="{{index}}">{{item}}</text> 
+        <text class="tag-text" wx:for="{{photosInfo.tags}}" wx:if="{{item}}" wx:key="{{index}}">{{item}}</text>
+        <text wx:if="{{!photosInfo.tags}}" class="blank-text">暂无标签</text>
       </view>
       <view class="info">
         <text class="length">共{{photosInfo.length}}张</text>

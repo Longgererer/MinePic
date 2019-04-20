@@ -4,7 +4,7 @@
       <button class="top-button {{status == 1 ? 'bt-color' : ''}}" bindtap="changeTop">{{status == 1 ? "取消置顶" : "置顶"}}</button>
     </view>
     <view class="original-img">
-      <image src="{{previewImgs[current]}}" mode="aspectFit"></image>
+      <image src="{{previewImgs[current]}}" mode="widthFix"></image>
     </view>
     <view class="content-text" bindtap="showText">
       <text class="{{whole?'':'show-text'}}">{{contentText}}</text>
@@ -14,7 +14,7 @@
     <view class='swiper-box'>
       <swiper wx:if="{{!isHide}}" display-multiple-items='{{displayMultipleItems}}' circular="{{circular}}" previous-margin="{{previousMargin}}" next-margin="{{nextMargin}}" bindchange="swiperChange">    
         <block wx:for="{{imgUrls}}" wx:key="{{index}}" current="{{current}}">        
-          <swiper-item>								
+          <swiper-item>				
             <image src='{{item}}' class="{{current === index ? 'active' : ''}}"></image>
           </swiper-item>
         </block>

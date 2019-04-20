@@ -29,7 +29,7 @@ Page({
           '⭐每日上新，第一时间就来看新品',
           '⭐精准搜款，分类齐全找款超简单'
         ],
-        QRCodeImg: '../../images/xcxQRCode.jpg'
+        QRCodeImg: 'http://39.97.184.156/weice/public/uploads/erweima.jpg'
       })
     }
   },

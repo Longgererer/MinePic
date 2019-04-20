@@ -41,36 +41,36 @@ Page({
     photosInfo: [
     ],
     videoInfo: [
-      // {
-      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      // },
-      // {
-      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      // },
-      // {
-      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      // },
-      // {
-      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      // },
-      // {
-      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      // },
-      // {
-      //   url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
-      //   poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
-      //   content: "视频描述视频描述视频描述视频描述视频描述视频描述"
-      // }
+      {
+        url: "https://www.bilibili.com/video/av49782443?from=search&seid=12124652608022085561", 
+        poster: "http://i0.hdslb.com/bfs/archive/70678a88da1c850c94889a00d8e493d432bc6685.jpg",
+        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      },
+      {
+        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      },
+      {
+        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      },
+      {
+        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      },
+      {
+        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      },
+      {
+        url: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400", 
+        poster: "https://p0.ssl.qhimgs1.com/sdr/400__/t01aecbb6191603a48c.jpg",
+        content: "视频描述视频描述视频描述视频描述视频描述视频描述"
+      }
     ],
     tabIndex: 0
   },
@@ -118,13 +118,14 @@ Page({
             // if(item.toutel >= 2){
             //   item.toutel.split(',')
             // }
+            console.log(Boolean(item.tabname[0]))
             let arrInfo = {
               length: item.toutel,
               time: item.create_time,
               content: item.describes,
               status: item.is_hot,
               route_dy_id: item.route_dy_id,
-              tags: item.tabname,
+              tags: item.tabname[0] ? item.tabname : '',
               image: item.thumb_route
             }
             info.push(arrInfo)
