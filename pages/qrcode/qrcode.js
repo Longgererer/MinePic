@@ -20,7 +20,7 @@ Page({
           '不仅第一时间查看最新动态😚',
           '还能轻松一键转发朋友圈😀'
         ],
-        QRCodeImg: '../../images/myQRCode.jpg'
+        QRCodeImg: 'http://39.97.184.156/weice/public/uploads/9999.png'
       })
     }else{
       this.setData({
@@ -37,7 +37,7 @@ Page({
     const data = this.data.contentText.join('\n')
     wx.setClipboardData({
       data,
-      success (res) {
+      success: res => {
         wx.hideToast()
         wx.showToast({
           title: '文字已复制，保存二维码分享到朋友圈哦',
@@ -50,8 +50,8 @@ Page({
   previewImage: function (e) {
     const url = this.data.QRCodeImg
     wx.previewImage({
-      current: "https://wx.qlogo.cn/mmopen/vi_32/bULf2u1P7aKgagtlLaoWSlwEPOn1sgjFcbdr2KbrGgrVOnpKGvyWiaPM2MMsKesTN7dhcjKZ8HAO7pzyIZ7iaaSw/132",
-      urls: ["https://wx.qlogo.cn/mmopen/vi_32/bULf2u1P7aKgagtlLaoWSlwEPOn1sgjFcbdr2KbrGgrVOnpKGvyWiaPM2MMsKesTN7dhcjKZ8HAO7pzyIZ7iaaSw/132"]
+      current: this.data.QRCodeImg,
+      urls: [this.data.QRCodeImg]
     })
   }
 })

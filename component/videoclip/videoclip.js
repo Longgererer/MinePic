@@ -1,7 +1,8 @@
 const app = getApp()
 Component({
   properties: {
-    videoInfo: Object
+    videoInfo: Object,
+    index: Number
   },
   data: {
   },

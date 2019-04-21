@@ -1,14 +1,1 @@
-<video id='myvedio' src="{{videoInfo.url}}" direction='0' poster="https://qingteng.net.cn/images/green.jpg">
-  <!-- <cover-view wx:if="{{show}}" class="poster">
-    <cover-image src="{{videoInfo.poster}}"></cover-image>
-    <cover-view class='playbtn'>
-        <cover-image src='../../images/play.png'></cover-image>
-    </cover-view>
-    <cover-view class="content">
-      {{videoInfo.content}}
-    </cover-view>
-  </cover-view> -->
-  <!-- <cover-view class="content">
-      
-  </cover-view> -->
-</video>
+<slot></slot>

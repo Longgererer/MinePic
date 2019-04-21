@@ -243,7 +243,7 @@ Page({
       },
       success: res => {
         if(res.statusCode == 200) {
-          let arr = res.data.reverse()
+          let arr = res.data
           let info = []
           arr.forEach(function (item) {
             let arrInfo = {

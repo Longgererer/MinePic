@@ -164,7 +164,6 @@ Page({
         info[list] = this.data.status
         const pages = getCurrentPages()
         const prevPage = pages[pages.length - 2]
-        prevPage.rearrangeByTime()
         prevPage.setData(
             info
         )

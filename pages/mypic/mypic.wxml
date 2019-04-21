@@ -1,6 +1,4 @@
 <view class="whole">
-
-<!-- header: show user's information -->
   <view class='header'>
     <my-header userInfo='{{userInfo}}'></my-header>
       <view class='header-detail'>
@@ -17,14 +15,13 @@
         </view>
       </view>
   </view>
-<!-- container -->
   <view class="tabs">
       <my-pictab wx:for="{{tabs}}" wx:key="{{index}}" tabInfo="{{item}}" data-index="{{index}}" bindtap="changeTab" class="{{tabIndex === index ? 'border' : ''}}"></my-pictab>
   </view>
   <view class="container" hidden="{{tabIndex !== 0}}">
     <view class="top">
       <my-top wx:for="{{photosInfo}}" wx:if="{{item.status == '1'}}" wx:key="{{index}}" content="{{item}}" data-info="{{item}}" data-toplen="{{topLen}}" data-index="{{index}}" bindtap="showMyDicPreview"></my-top>
-      <view class="blank-view" wx:for="{{3-topLen}}" wx:if="{{isBlankShow}}">
+      <view class="blank-view" wx:for="{{3-topLen}}" wx:key="{{index}}" wx:if="{{isBlankShow}}">
         <text class="blank-view-text">暂无置顶图集</text>
       </view>
     </view>
@@ -38,7 +35,9 @@
   </view>
   <view class="container video-box" hidden="{{tabIndex !== 1}}">
     <view class="video">
-      <my-videos wx:for="{{videoInfo}}" wx:key="{{index}}" videoInfo="{{item}}"></my-videos>
+      <my-videos id="{{'video_'+index}}" wx:for="{{videoInfo}}" wx:key="{{index}}" videoInfo="{{item}}" index="{{index}}">
+        <video id="{{'video'+index}}" data-index="{{index}}" src="{{item.url}}" direction='0' poster="{{item.poster}}" bindplay="videoPlay"></video>
+      </my-videos>
     </view>
   </view>
   <view class="container" hidden="{{tabIndex !== 2}}">

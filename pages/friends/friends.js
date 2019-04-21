@@ -14,7 +14,7 @@ Page({
       },
       {
         headImg: 'https://wx.qlogo.cn/mmopen/vi_32/ibthrJzWeVG25nAaJKbRyjk9rW7wSEj01k9t6cicoDucSiberQ0MvGgYtuosI1e4vd9ExibJF7qH5OVibpPAyftMocw/132',
-        nickName: '彼得潘',
+        nickName: '孙强',
       },
       {
         headImg: 'https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLBXbTHWJQ8Gr8tKhtH14kQhibvVVNSIe1up0ic2de5pjj7N2ApokiaI3kiaV8hElsybK7BXv2xicASYicg/132',
@@ -22,7 +22,7 @@ Page({
       },
       {
         headImg: 'https://wx.qlogo.cn/mmopen/vi_32/qkkxmNycW0kYqbGhCvMcgiaQepIsiaH7ia66ibwzHpRwaQGSN0ouGSh5yMBEg44hCPY2ticGoaCkJKoMEDpZNH0dtOA/132',
-        nickName: '谢泳洧',
+        nickName: '会飞的猪',
       },
       {
         headImg: '../../images/qq.png',
