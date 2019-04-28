@@ -106,11 +106,11 @@ my-photos{
   flex-wrap: wrap;
   width: 95%;
 }
-my-videos{
+/* my-videos{
   width: 200rpx;
   height: 250rpx;
   margin-top: 10rpx;
-}
+} */
 .upload{
   display: flex;
   flex-direction: column;
@@ -143,4 +143,9 @@ my-videos{
 }
 .border{
   border-bottom: 10rpx solid orange;
+}
+video{
+  width: 530rpx;
+  height: 400rpx;
+  margin: 10rpx 80rpx 10rpx 140rpx;
 }

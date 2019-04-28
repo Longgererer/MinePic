@@ -2,6 +2,7 @@
   "navigationBarTitleText": "相册动态",
   "usingComponents": {
     "my-header": "../../component/header/header",
-    "active": "../../component/active/active"
+    "active": "../../component/active/active",
+    "share": "../../component/share/share"
   }
 }

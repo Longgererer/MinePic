@@ -10,23 +10,14 @@
         <view class="test"></view>
       </view>
     </view>
-
     <view class="commodity-screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
     <view animation="{{animationData}}" class="commodity-attr-box" wx:if="{{showModalStatus}}">
       <text class="share-to">分享至</text>
       <view class="line"></view>
       <view class="share-tab">
-        <button class="friends" open-type="share" hover-class="hover" hover-start-time="10" hover-stay-time="100">
-          <image src="../../images/wx.png"/>
-          <text>微信好友</text>
-        </button>
-        <button class="circle-of-friends" bindtap="shareToCircle" hover-class="hover" hover-start-time="10" hover-stay-time="100">
-          <image src="../../images/wxmore.png"/>
-          <text>微信朋友圈</text>
-        </button>
-        <button class="more" bindtap="more" hover-class="hover" hover-start-time="10" hover-stay-time="100">
-          <image src="../../images/more.png"/>
-          <text>更多</text>
+        <button wx:for="{{shareBtnInfo}}" wx:key="{{index}}" open-type="{{index === 0 ? item.tap : ''}}" bindtap="{{index !== 0 ? item.tap : ''}}" hover-class="hover" hover-start-time="10" hover-stay-time="100">
+          <image src="{{item.url}}"/>
+          <text>{{item.text}}</text>
         </button>
       </view>
       <view class="line"></view>
@@ -43,7 +34,7 @@
           <text class="notice">保存图片到手机，分享到朋友圈</text>
           <view class="qrcode" hover-class="none" hover-stop-propagation="false">
             <image bindtap="previewImg" style="width: 400rpx;height: 400rpx;" src="http://39.97.184.156/weice/public/uploads/erweima.jpg"></image>
-            <!-- <canvas hidden="true" style="width: 400rpx;height: 400rpx;background:#f1f1f1;" canvas-id="mycanvas" ></canvas> -->
+            <canvas hidden="true" style="width: 400rpx;height: 400rpx;background:#f1f1f1;" canvas-id="mycanvas" ></canvas>
           </view>
           <view class="save-button">
             <button bindtap="hideCircle">取消</button>

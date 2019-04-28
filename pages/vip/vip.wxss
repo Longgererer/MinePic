@@ -1,0 +1,89 @@
+page{
+  background-color: #f2f2f2;
+}
+.whole{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.head-box{
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head-img{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 200rpx;
+  border:2px solid #fff;
+  overflow: hidden;
+}
+.head-img image{
+  width: 100%;
+  height: 100%;
+}
+.nick-name{
+  margin-top: 10px;
+  color: #999999;
+}
+.vip-box{
+  display: flex;
+  align-items: center;
+  margin-top: 20rpx;
+  width: 100%;
+  height: 190rpx;
+  background-color: #fff;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+}
+.vip-content{
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 75%;
+}
+.content-img{
+  width: 100rpx;
+  height: 100rpx;
+  margin: 0 10rpx;
+}
+.content-img image{
+  width: 100%;
+  height: 100%;
+}
+.content-text{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-text .title{
+  font-size: 19px;
+}
+.content-text .content{
+  margin-top: 10rpx;
+  font-size: 15px;
+  color: #999999;
+}
+button{
+  height: 80rpx;
+  width: 160rpx;
+  border: none;
+  border: 1px solid #ffd700;
+  color: #ffd700;
+  position: absolute;
+  right: 10px;
+  font-size: 16px;
+  background-color: #fff;
+}
+.hover{
+  background-color: #ffd700;
+  color: #fff;
+}
+.cheap{
+  margin-left: 10rpx;
+  color: rgb(255, 123, 0);
+  font-size: 14px;
+}

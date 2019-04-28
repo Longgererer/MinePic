@@ -1,0 +1,28 @@
+<view class="money flex flex-col flex-acen">
+  <view class="money-img">
+    <image src="../../images/moneyChange.png"/>
+  </view>
+  <text class="title">可提现金额</text>
+  <text class="money-num">￥<text>{{money}}</text></text>
+  <text class="money-can-pay">可提现￥{{money}}</text>
+</view>
+<view class="money-bgc" wx:if="{{!isBgcHidden}}"></view>
+<view class="money-model flex flex-col flex-acen" wx:if="{{!isBgcHidden}}">
+  <view class="head-img flex flex-jcen">
+    <view class="img-box">
+      <image src="../../images/qq.png"/>
+    </view>
+  </view>
+  <view class="money-center flex flex-acen">
+    <text class="money-center-title">金额（元）</text>
+    <text class="money-center-num">0.00元</text>
+    <view class="arrow"></view>
+  </view>
+  <view class="money-pay-way flex flex-acen">
+    <text class="money-pay-way-title">提现到</text>
+    <image src="../../images/moneyConfirm.png"/>
+    <text class="blue">微信零钱</text>
+  </view>
+  <button class="money-confirm" hover-class="button-hover" bindtap="hideMoneyPay">确定</button>
+</view>
+<button class="money-btn" hover-class="hover" bindtap="showMoneyPay">提现</button>

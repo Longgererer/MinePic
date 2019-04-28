@@ -9,17 +9,20 @@
     <view class="active-text" bindtap="showText">
         <text selectable="{{true}}" class="{{whole?'':'show-text'}}">{{contentText}}</text>
     </view>
-    <view class="active-image" bindtap="toPreview"> 
+    <view wx:if="{{isVideo}}">
+        <slot class="video"></slot>
+    </view>
+    <view wx:else class="active-image" bindtap="toPreview"> 
       <image class="picture" wx:for="{{contentImg}}" wx:key="{{index}}" src="{{item}}"/>
     </view>
     <view class="handle">
-        <view class="download" bindtap="downloadImg">
-        <image src="../../images/dowload.png"/>
-        <text>批量下载</text>
-    </view>
-    <view class="share" bindtap="share" >
-        <image src="../../images/share.png"/>
-        <text>分享</text>
-    </view>
+        <view class="download" bindtap="downloadImg" wx:if="{{!isVideo}}">
+            <image src="../../images/dowload.png"/>
+            <text>批量下载</text>
+        </view>
+        <view class="share" bindtap="share" >
+            <image src="../../images/share.png"/>
+            <text>分享</text>
+        </view>
     </view>
 </view>

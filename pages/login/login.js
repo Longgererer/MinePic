@@ -1,7 +1,7 @@
 const app = getApp()
+const api = require('../../api.js')
 Page({
   data: {
-    //判断小程序的API，回调，参数，组件等是否在当前版本可用。
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
   onLoad: function () {
@@ -24,36 +24,45 @@ Page({
   },
   bindGetUserInfo: function (e) {
     if (e.detail.userInfo) {
-      //用户按了允许授权按钮s
-      //插入登录的用户的相关信息到数据库
       app.globalData.userInfo = e.detail.userInfo
+      const headimgurl = e.detail.userInfo.imgUrl
+      const nickName = e.detail.userInfo.nickName
       const openid = app.globalData.openid
-      wx.request({
-        url: 'http://39.97.184.156/weice/public/index/headimgurl/index',
-        method: 'GET',
-        data: {
-          openid,
-          nickname: e.detail.userInfo.nickName,
-          headimgurl: e.detail.userInfo.avatarUrl
-        },
-        header: {
-          'content-type': 'application/json'
-        },
-        success: res => {
+      const encryptedData = e.detail.encryptedData
+      const iv = e.detail.iv
+      const code = app.globalData.code
+      const appid = app.globalData.appid
+      const appSecret = app.globalData.appSecret
+      console.log(iv)
+      console.log(nickName)
+
+      const loginInfo = app.createObj(api.login, 'GET', {
+        encryptedData,
+        iv,
+        code,
+        appid,
+        appSecret
+      }, res => {
+        if (res.statusCode == 200) {
           console.log(res)
-          console.log("插入小程序登录用户信息成功！"+"\n openid="+openid);
         }
-      });
-      wx.setStorage({
-        key: "userInfo",
-        data: e.detail.userInfo
       })
-      //授权成功后，跳转进入小程序首页
+      console.log(loginInfo)
+      app.ajax(loginInfo)
+
+      // const pushInfo = app.createObj(api.uploadInfo, 'GET', {
+      //   openid,
+      //   nickname: e.detail.userInfo.nickName,
+      //   headimgurl: e.detail.userInfo.avatarUrl
+      // }, res => {
+      //   console.log("插入小程序登录用户信息成功！"+"\n openid="+openid);
+      // })
+      // app.ajax(pushInfo)
+
       wx.switchTab({
         url: '../my/my'
       })
     } else {
-      //用户按了拒绝按钮
       wx.showModal({
         title: '警告',
         content: '您点击了拒绝授权，将无法进入小程序，请授权之后再进入!!!或当前网络不可用',
@@ -66,22 +75,5 @@ Page({
         }
       })
     }
-  },
-  //获取用户信息接口
-  // queryUserInfo: function () {
-  //   wx.request({
-  //     url: getApp().globalData.urlPath ,
-  //     data: {
-  //       openid: getApp().globalData.openid
-  //     },
-  //     header: {
-  //       'content-type': 'application/json'
-  //     },
-  //     success: function (res) {
-  //       console.log(res.data);
-  //       getApp().globalData.userInfo = res.data;
-  //     }
-  //   });
-  // },
-
+  }
 })

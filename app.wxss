@@ -1,4 +1,3 @@
-/**app.wxss**/
 .container {
   height: 100%;
   display: flex;
@@ -8,3 +7,24 @@
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+.flex{
+  display: flex;
+}
+.flex-col{
+  flex-direction: column;
+}
+.flex-acen{
+  align-items: center;
+}
+.flex-jcen{
+  justify-content: center;
+}
+.flex-one{
+  flex: 1;
+}
+.flex-between{
+  justify-content: space-between;
+}
+.flex-around{
+  justify-content: space-around;
+}

@@ -11,6 +11,9 @@
     "pages/friends/friends",
     "pages/fans/fans",
     "pages/qrcode/qrcode",
+    "pages/vip/vip",
+    "pages/money/money",
+    "pages/question/question",
     "pages/upload/upload"
   ],
   "window": {

@@ -5,6 +5,6 @@
         "my-pictab": "../../component/mypictab/mypictab",
         "my-top": "../../component/mytop/mytop",
         "my-photos": "../../component/photos/photos",
-        "my-videos": "../../component/videoclip/videoclip"
+        "my-videos": "../../component/active/active"
     }
 }

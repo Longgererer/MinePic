@@ -1,0 +1,8 @@
+<view class="question flex flex-col flex-acen">
+  <view class="head-img">
+    <image src="../../images/questionLogo.png" />
+  </view>
+  <items class="items" wx:for="{{info}}" wx:key="{{index}}" itemsText="{{item}}"></items>
+  <button class="btn-to-contact" open-type="contact" type="default-light" size="20" session-from="weapp" hover-class="hover">客服</button>
+  <button class="btn-to-feedback" open-type="feedback" hover-class="hover" hover-start-time="10" hover-stay-time="100">反馈</button>
+</view>

@@ -1,0 +1,22 @@
+<view class="whole">
+  <view class="head-box">
+    <view class="head-img">
+      <image src="{{userInfo.avatarUrl}}"/>
+    </view>
+    <view class="nick-name">
+      <text>{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="vip-box" wx:for="{{vipInfo}}" wx:key="{{index}}">
+    <view class="vip-content">
+      <view class="content-img">
+        <image src="../../images/king.png"/>
+      </view>
+      <view class="content-text">
+        <text class="title">{{item.title}}<text class="cheap" wx:if="{{index === 1}}">超值推荐</text></text>
+        <text class="content">{{item.content}}</text>
+      </view>
+      <button hover-class="hover" hover-start-time="10" hover-stay-time="100">开启</button>
+    </view>
+  </view>
+</view>

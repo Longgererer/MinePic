@@ -35,7 +35,7 @@
   </view>
   <view class="container video-box" hidden="{{tabIndex !== 1}}">
     <view class="video">
-      <my-videos id="{{'video_'+index}}" wx:for="{{videoInfo}}" wx:key="{{index}}" videoInfo="{{item}}" index="{{index}}">
+      <my-videos id="{{'video_'+index}}" wx:for="{{videoInfo}}" wx:key="{{index}}" userImg="{{userInfo.avatarUrl}}" createTime="{{item.createTime}}" nickName="{{userInfo.nickName}}" contentText="{{item.content}}" isVideo="{{true}}" videoInfo="{{item}}" index="{{index}}">
         <video id="{{'video'+index}}" data-index="{{index}}" src="{{item.url}}" direction='0' poster="{{item.poster}}" bindplay="videoPlay"></video>
       </my-videos>
     </view>

@@ -7,7 +7,8 @@ Component({
     contentText: String,
     contentImg: Array,
     originalImg: Array,
-    route_dy_id: String
+    route_dy_id: String,
+    isVideo: Boolean
   },
   data: {
     whole: false

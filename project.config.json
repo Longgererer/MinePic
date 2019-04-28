@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 14,
+			"current": 19,
 			"list": [
 				{
 					"id": -1,
@@ -132,6 +132,41 @@
 					"id": -1,
 					"name": "asd",
 					"pathName": "pages/mydicpreview/mydicpreview",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "vip",
+					"pathName": "pages/vip/vip",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "money",
+					"pathName": "pages/money/money",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "question",
+					"pathName": "pages/question/question",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "common",
+					"pathName": "pages/commonque/commonque",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "uploadque",
+					"pathName": "pages/uploadque/uploadque",
 					"scene": null
 				}
 			]

@@ -6,31 +6,31 @@
     border-top: 1px solid #cecece;
 }
 .arrow{
-    width: 10px;
-    height: 10px;
-    border-top: 2px solid #cecece;
-    border-right: 2px solid #cecece;
+    width: 20rpx;
+    height: 20rpx;
+    border-top: 4rpx solid #cecece;
+    border-right: 4rpx solid #cecece;
     position: absolute;
     right: 20rpx;
     transform: rotate(45deg);
 }
 .items-text{
-    font-size: 16px;
-    margin-left: 20px;
+    font-size: 32rpx;
+    margin-left: 40rpx;
 }
 .items-img{
     width: 50rpx;
     height: 50rpx;
-    margin-left: 40px;
+    margin-left: 80rpx;
 }
 .items-info-text{
-    font-size: 15px;
+    font-size: 30rpx;
     color: #c4c3c3;
     position: absolute;
-    right: 30px;
+    right: 60rpx;
 }
 .items-fans{
-    font-size: 16px;
+    font-size: 32rpx;
 }
 .hover{
     background-color: #e0dfdf !important;

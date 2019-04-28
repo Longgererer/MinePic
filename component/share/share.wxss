@@ -1,0 +1,130 @@
+.commodity-attr-box {
+  height: 375rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1100;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+ .share-to{
+  font-size: 12px;
+  color: #7B7B7B;
+  padding: 20rpx 0;
+ }
+ .line{
+  width: 100%;
+  height: 2rpx;
+  background: #D8D8D8;
+ }
+ .share-tab{
+   width: 100%;
+   display: flex;
+   flex-direction: row;
+ }
+ .share-tab button{
+   background: #FFF;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   flex: 1;
+   padding: 25rpx 0;
+   border-radius: 0;
+ }
+ .share-tab button::after{
+   border: none;
+ }
+ .share-tab button image{
+   width: 70rpx;
+   height: 70rpx;
+ }
+ .share-tab button text{
+   padding-top: 20rpx;
+   font-size: 15px;
+ }
+ .cancel{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  width: 100%;
+  height: 40px;
+ }
+ .canvas-view{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ }
+.canvas-picture{
+  width: 500rpx;
+  height: 650rpx;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20rpx;
+  background: #FFF;
+}
+.title text{
+  font-size: 14px;
+  padding: 20rpx;
+}
+.title .line{
+  margin-top: 10rpx;
+}
+.qrcode{
+  width: 100%;
+  height: 400rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20rpx 0;
+}
+.notice{
+  font-size: 14px;
+  color: #7B7B7B;
+}
+.save-button{
+  display: flex;
+}
+.save-button button{
+  background: #FFF;
+  font-size: 14px;
+  color: #7B7B7B;
+}
+.save-button button::after{
+  border: none;
+}
+.more-toast{
+  position: fixed;
+  left: 25%;
+  top: 60%;
+  width: 50%;
+  padding: 20rpx 0;
+  border-radius: 20rpx;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #FFF;
+  transition: all 0.5s ease;
+  visibility: hidden;
+}
+.visible{
+  visibility: visible;
+}
+.hover{
+  background-color: #e0dfdf !important;
+}

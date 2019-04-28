@@ -1,0 +1,45 @@
+page{
+  background-color: #f2f2f2;
+  position: relative;
+}
+.head-img{
+  margin: 20rpx 0;
+}
+.head-img image{
+  width: 200rpx;
+  height: 200rpx;
+}
+.items{
+  width: 100%;
+  background-color: #fff;
+}
+.items>view{
+  border: 1px solid #f2f2f2;
+}
+.btn-to-contact{
+  width: 100%;
+  height: 104rpx;
+  position: absolute;
+  bottom: 104rpx;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+}
+.btn-to-contact::after{
+  border: none;
+}
+.btn-to-feedback{
+  width: 100%;
+  height: 104rpx;
+  position: absolute;
+  bottom: 0;
+  color: transparent;
+  background-color: transparent;
+  border: none;
+}
+.btn-to-feedback::after{
+  border: none;
+}
+.hover{
+  background-color: #e0dfdf !important;
+}
